@@ -10,7 +10,6 @@ def backtrack_search(prob, count=0):
     global backtrack_count
     prob.inference()
     if prob.is_impossible():
-        print("Backtracking")
         backtrack_count += 1
         return None
     if prob.is_solved():
@@ -19,7 +18,6 @@ def backtrack_search(prob, count=0):
         result = backtrack_search(prob.take_action(y, x, val))
         if result:
             return result
-    print("Backtracking")
     backtrack_count += 1
     return None
 
