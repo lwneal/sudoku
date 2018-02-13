@@ -31,7 +31,6 @@ class Sudoku:
     def heuristic_naked_singles(self):
         is_known = self.state.sum(axis=2) == 1
         argmaxes = self.state.argmax(axis=2)
-        count = 0
         old_state = self.state.copy()
         for y, x in np.ndindex(9, 9):
             if is_known[y, x]:
@@ -66,12 +65,12 @@ class Sudoku:
                 for idx in range(9):
                     if self.state[y, x, idx]:
                         value = idx + 1
-                        assignments.append( (y, x, value) )
-        def mcv(assignment):
+                        assignments.append((y, x, value))
+        def mrv(assignment):
             y, x, _ = assignment
             return self.state[y, x].sum()
         if heuristic:
-            assignments.sort(key=mcv)
+            assignments.sort(key=mrv)
         print("{} assignments left".format(len(assignments)))
         return assignments
     
