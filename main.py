@@ -4,23 +4,22 @@ Solving Sudoku using Backtracking Search with Constraint Propagation
 import sys
 import sudoku
 
+backtrack_count = 0
 
-# The search begins by storing all possible values for each of the empty spots.
-# Then it does constraint propagation through domain-specific inference rules.
-# When the constraint propagation converges, then:
-#   if no candidates left for some cell, then backtrack from the current state.
-#   else pick a cell, and assign it a consistent value
 def backtrack_search(prob, count=0):
+    global backtrack_count
     prob.inference()
     if prob.is_impossible():
-        return None, count + 1
+        backtrack_count += 1
+        return None
     if prob.is_solved():
         return prob, count
     for y, x, val in prob.get_possible_actions():
-        result, child_count = backtrack_search(prob.take_action(y, x, val), count)
+        result = backtrack_search(prob.take_action(y, x, val))
         if result:
-            return result, count + child_count
-    return None, count + 1
+            return result
+    backtrack_count += 1
+    return None
 
 
 if __name__ == '__main__':
