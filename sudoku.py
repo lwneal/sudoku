@@ -26,7 +26,6 @@ class Sudoku:
         heuristics = [getattr(self, h) for h in dir(self) if h.startswith('heuristic')]
         while any(h() for h in heuristics):
             pass
-        pass
 
     def heuristic_naked_singles(self):
         is_known = self.state.sum(axis=2) == 1
@@ -39,8 +38,25 @@ class Sudoku:
         return np.any(self.state != old_state)
 
     def heuristic_hidden_singles(self):
-        # TODO
-        pass
+        old_state = self.state.copy()
+        for idx in range(9):
+            for row in range(9):
+                if self.state[row, :, idx].sum() == 1:
+                    x = self.state[row, :, idx].argmax()
+                    assign_idx(self.state, row, x, idx)
+            for col in range(9):
+                if self.state[:, col, idx].sum() == 1:
+                    y = self.state[:, col, idx].argmax()
+                    assign_idx(self.state, y, col, idx)
+            for bx, by in np.ndindex(3, 3):
+                box = self.state[by*3:3+by*3, bx*3:3+bx*3, idx]
+                if box.sum() == 1:
+                    y = 3*by + box.argmax(axis=0).max()
+                    x = 3*bx + box.argmax(axis=1).max()
+                    assign_idx(self.state, y, x, idx)
+        # Return a nonzero value if this heuristic changed anything
+        return np.any(self.state != old_state)
+
 
     def heuristic_naked_pairs(self):
         # TODO
@@ -71,7 +87,6 @@ class Sudoku:
             return self.state[y, x].sum()
         if heuristic:
             assignments.sort(key=mrv)
-        print("{} assignments left".format(len(assignments)))
         return assignments
     
     def take_action(self, y, x, value):
