@@ -1,5 +1,5 @@
 import numpy as np
-
+from functools import reduce
 
 class Sudoku:
     def __init__(self, state=None):
@@ -58,21 +58,391 @@ class Sudoku:
         return np.any(self.state != old_state)
 
 
+
     def heuristic_naked_pairs(self):
-        # TODO
-        pass
+        old_state = self.state.copy()
+        for idx in range(9):
+            for row in range(9):
+                #get current box 
+                cur_space = self.state[row, : ,idx]
+                #if its a pair
+                if cur_space.sum() == 2:
+                    #then find if there is another pair thats the same
+                    for partner in range(9):
+                        if partner == row: continue
+                        partner_space = self.state[partner, : ,idx]
+
+                        if (cur_space == partner_space).sum() == 9:
+                            pair_indices = [i for i, x in enumerate(cur_space) if x == True]
+                            #remove these numbers from all others
+                            for rest in range(9):
+                                if rest == row: continue
+                                if rest == partner: continue
+                                self.state[rest,:,idx][pair_indices[0]] = False
+                                self.state[rest,:,idx][pair_indices[1]] = False
+        
+            for col in range(9):
+                #get current box 
+                cur_space = self.state[:, col,idx]
+                #if its a pair
+                if cur_space.sum() == 2:
+                    #then find if there is another pair thats the same
+                    for partner in range(9):
+                        if partner == col: continue
+                        partner_space = self.state[partner, : ,idx]
+
+                        if (cur_space == partner_space).sum() == 9:
+                            pair_indices = [i for i, x in enumerate(cur_space) if x == True]
+                            #remove these numbers from all others
+                            for rest in range(9):
+                                if rest == col: continue
+                                if rest == partner: continue
+                                self.state[:,rest,idx][pair_indices[0]] = False
+                                self.state[:,rest,idx][pair_indices[1]] = False
+            
+            for bx, by in np.ndindex(3, 3):
+                #get current box 
+                cur_space = self.state[by*3:3+by*3, bx*3:3+bx*3,idx]
+                #if its a pair
+                if cur_space.sum() == 2:
+                    #then find if there is another pair thats the same
+                    for px, py in np.ndindex(3, 3):
+                        if px == bx and py == by: continue
+                        partner_space = self.state[py*3:3+py*3, px*3:3+px*3,idx]
+
+                        if (cur_space == partner_space).sum() == 9:
+                            pair_indices_x = []
+                            pair_indices_y = []
+                            for x,y in np.ndindex(3, 3):
+                                if cur_space[x][y] == True:
+                                    pair_indices_x.append(x)
+                                    pair_indices_y.append(y)
+                            #remove these numbers from all others
+                            for rx, ry in np.ndindex(3, 3):
+                                if rx == bx and ry == by: continue
+                                if rx == px and ry == py: continue
+                                self.state[ry*3:3+ry*3, rx*3:3+rx*3,idx][pair_indices_x[0]][pair_indices_y[0]] = False
+                                self.state[ry*3:3+ry*3, rx*3:3+rx*3,idx][pair_indices_x[1]][pair_indices_y[1]] = False
+        return np.any(self.state != old_state)
+        
 
     def heuristic_hidden_pairs(self):
-        # TODO
-        pass
+        old_state = self.state.copy()
+        for idx in range(9):
+            for row in range(9):
+                #get current box 
+                cur_space = self.state[row, : ,idx]
+                cur_space_indices = [i for i, x in enumerate(cur_space) if x == True] 
+                #search all other spaces
+                for partner in range(9):
+                    if partner == row: continue
+                    partner_space = self.state[partner, : ,idx]
+                    partner_space_indices = [i for i, x in enumerate(partner_space) if x == True] 
+
+                    #find the common numbers between two arbitrary spaces
+                    intersect = np.intersect1d(cur_space_indices,partner_space_indices)
+                    if len(intersect) == 2:
+                        
+                        break_partner = False
+                        for other in range(9):
+                            if other == row: continue
+                            if other == partner: continue
+                        
+                            other_space = self.state[other, : ,idx] 
+                            other_space_indices = [i for i, x in enumerate(other_space) if x == True] 
+                            #see if the common pair is unique
+                            other_intersect = np.intersect1d(intersect,other_space_indices)
+                            if (len(other_intersect) == 2):
+                                #if it is, quit your partner
+                                break_partner = True
+                                break
+
+                        #we java now
+                        if break_partner: break
+
+                        #actually apply the inference
+                        self.state[row, : ,idx] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
+                        self.state[partner, : ,idx] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
+            for col in range(9):
+                #get current box 
+                cur_space = self.state[:, col ,idx]
+                cur_space_indices = [i for i, x in enumerate(cur_space) if x == True] 
+                #search all other spaces
+                for partner in range(9):
+                    if partner == col: continue
+                    partner_space = self.state[:, partner ,idx]
+                    partner_space_indices = [i for i, x in enumerate(partner_space) if x == True] 
+
+                    #find the common numbers between two arbitrary spaces
+                    intersect = np.intersect1d(cur_space_indices,partner_space_indices)
+                    if len(intersect) == 2:
+                        
+                        break_partner = False
+                        for other in range(9):
+                            if other == col: continue
+                            if other == partner: continue
+                        
+                            other_space = self.state[:, other ,idx] 
+                            other_space_indices = [i for i, x in enumerate(other_space) if x == True] 
+                            #see if the common pair is unique
+                            other_intersect = np.intersect1d(intersect,other_space_indices)
+                            if (len(other_intersect) == 2):
+                                #if it is, quit your partner
+                                break_partner = True
+                                break
+
+                        #we java now
+                        if break_partner: break
+
+                        #actually apply the inference
+                        self.state[:, col ,idx] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
+                        self.state[:, partner ,idx] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
+
+            
+            for bx, by in np.ndindex(3, 3):
+                #get current box 
+                cur_space = self.state[by*3:3+by*3, bx*3:3+bx*3,idx].flatten()
+                cur_space_indices = [i for i, x in enumerate(cur_space) if x == True] 
+                #search all other spaces
+                for px, py in np.ndindex(3, 3):
+                    if px == bx and py == by: continue
+                    partner_space = self.state[py*3:3+py*3, px*3:3+px*3,idx].flatten()
+                    partner_space_indices = [i for i, x in enumerate(partner_space) if x == True] 
+
+                    #find the common numbers between two arbitrary spaces
+                    intersect = np.intersect1d(cur_space_indices,partner_space_indices)
+                    if len(intersect) == 2:
+                        
+                        break_partner = False
+                        for rx, ry in np.ndindex(3, 3):
+                            if rx == bx and ry == by: continue
+                            if rx == px and ry == py: continue
+                        
+                            other_space = self.state[ry*3:3+ry*3, rx*3:3+rx*3,idx].flatten() 
+                            other_space_indices = [i for i, x in enumerate(other_space) if x == True] 
+                            #see if the common pair is unique
+                            other_intersect = np.intersect1d(intersect,other_space_indices)
+                            if (len(other_intersect) == 2):
+                                #if it is, quit your partner
+                                break_partner = True
+                                break
+
+                        #we java now
+                        if break_partner: break
+
+                        #actually apply the inference
+                        self.state[by*3:3+by*3, bx*3:3+bx*3,idx] = np.asarray([True if np.isin(i,list(intersect)) else False for i in range(9) ]).reshape(3,3)
+                        self.state[py*3:3+py*3, px*3:3+px*3,idx] = np.asarray([True if np.isin(i,list(intersect)) else False for i in range(9) ]).reshape(3,3)
+        return np.any(self.state != old_state)
 
     def heuristic_naked_triples(self):
-        # TODO
-        pass
+        old_state = self.state.copy()
+        for idx in range(9):
+            for partner in range(9):
+                for triple in range(9):
+                    if triple == partner: continue
 
+                    for row in range(9):
+                        if row == partner: continue
+                        if row == triple: continue
+
+                        cur_space     = self.state[row,     : ,idx]
+                        partner_space = self.state[partner, : ,idx]
+                        triple_space  = self.state[triple,  : ,idx]
+
+                        if cur_space.sum() == 2 and partner_space.sum() == 2 and triple_space.sum() == 2:
+                            cur_space_indices     = [i for i, x in enumerate(cur_space) if x == True]
+                            partner_space_indices = [i for i, x in enumerate(partner_space) if x == True]
+                            triple_space_indices  = [i for i, x in enumerate(triple_space) if x == True]
+
+                            cp_intersect = np.intersect1d(cur_space_indices,partner_space_indices)
+                            pt_intersect = np.intersect1d(partner_space_indices,triple_space_indices)
+                            tc_intersect = np.intersect1d(triple_space_indices,cur_space_indices)
+
+                            union = reduce(np.union1d, (cp_intersect, pt_intersect, tc_intersect))
+
+                            if len(union) == 3:
+                                # remove the union numbers from the rest
+                                for rest in range(9):
+                                    if rest == row or rest ==partner or rest == triple: continue
+                                    self.state[rest, : ,idx][union[0]] = False
+                                    self.state[rest, : ,idx][union[1]] = False
+                                    self.state[rest, : ,idx][union[2]] = False
+
+                    for col in range(9):
+                        if col == partner: continue
+                        if col == triple : continue
+
+                        cur_space     = self.state[:,col,     idx]
+                        partner_space = self.state[:,partner, idx]
+                        triple_space  = self.state[:,triple,  idx]
+
+                        if cur_space.sum() == 2 and partner_space.sum() == 2 and triple_space.sum() == 2:
+                            cur_space_indices     = [i for i, x in enumerate(cur_space) if x == True]
+                            partner_space_indices = [i for i, x in enumerate(partner_space) if x == True]
+                            triple_space_indices  = [i for i, x in enumerate(triple_space) if x == True]
+
+                            cp_intersect = np.intersect1d(cur_space_indices,partner_space_indices)
+                            pt_intersect = np.intersect1d(partner_space_indices,triple_space_indices)
+                            tc_intersect = np.intersect1d(triple_space_indices,cur_space_indices)
+
+                            union = reduce(np.union1d, (cp_intersect, pt_intersect, tc_intersect))
+
+                            if len(union) == 3:
+                                # remove the union numbers from the rest
+                                for rest in range(9):
+                                    if rest == col or rest ==partner or rest == triple: continue
+                                    self.state[:,rest ,idx][union[0]] = False
+                                    self.state[:,rest ,idx][union[1]] = False
+                                    self.state[:,rest ,idx][union[2]] = False
+            
+            for px, py in np.ndindex(3, 3):
+                for tx, ty in np.ndindex(3, 3):
+                    for bx, by in np.ndindex(3, 3):
+                        if bx == tx and by == ty: continue
+                        if bx == px and by == py: continue
+                        if px == tx and py == ty: continue
+
+                        cur_space     = self.state[by*3:3+by*3, bx*3:3+bx*3,idx].flatten()
+                        partner_space = self.state[py*3:3+py*3, px*3:3+px*3,idx].flatten()
+                        triple_space  = self.state[ty*3:3+ty*3, tx*3:3+tx*3,idx].flatten()
+
+                        if cur_space.sum() == 2 and partner_space.sum() == 2 and triple_space.sum() == 2:
+                            cur_space_indices     = [i for i, x in enumerate(cur_space) if x == True]
+                            partner_space_indices = [i for i, x in enumerate(partner_space) if x == True]
+                            triple_space_indices  = [i for i, x in enumerate(triple_space) if x == True]
+
+                            cp_intersect = np.intersect1d(cur_space_indices,partner_space_indices)
+                            pt_intersect = np.intersect1d(partner_space_indices,triple_space_indices)
+                            tc_intersect = np.intersect1d(triple_space_indices,cur_space_indices)
+
+                            union = reduce(np.union1d, (cp_intersect, pt_intersect, tc_intersect))
+
+                            if len(union) == 3:
+                                # remove the union numbers from the rest
+                                for rx, ry in np.ndindex(3, 3):
+                                    if rx == bx and ry == by: continue
+                                    if rx == px and ry == py: continue
+                                    if rx == tx and ry == ty: continue
+
+                                    temp = np.asarray([True if np.isin(i,list(intersect)) else False for i in range(9) ]).reshape(3,3)
+                                    self.state[ry*3:3+ry*3, rx*3:3+rx*3,idx] = temp
+
+                                    self.state[:,rest ,idx][union[0]] = False
+                                    self.state[:,rest ,idx][union[1]] = False
+                                    self.state[:,rest ,idx][union[2]] = False
+                                
+        return np.any(self.state != old_state)
+
+    #TODO: refactor this into "hidden n"
     def heuristic_hidden_triples(self):
-        # TODO
-        pass
+        old_state = self.state.copy()
+        for idx in range(9):
+            for row in range(9):
+                #get current box 
+                cur_space = self.state[row, : ,idx]
+                cur_space_indices = [i for i, x in enumerate(cur_space) if x == True]
+                #search all other spaces
+                for partner in range(9):
+                    if partner == row: continue
+                    partner_space = self.state[partner, : ,idx]
+                    partner_space_indices = [i for i, x in enumerate(partner_space) if x == True] 
+
+                    #find the common numbers between two arbitrary spaces
+                    intersect = np.intersect1d(cur_space_indices,partner_space_indices)
+                    if len(intersect) == 3:
+                        
+                        break_partner = False
+                        for other in range(9):
+                            if other == row: continue
+                            if other == partner: continue
+                        
+                            other_space = self.state[other, : ,idx] 
+                            other_space_indices = [i for i, x in enumerate(other_space) if x == True] 
+                            #see if the common pair is unique
+                            other_intersect = np.intersect1d(intersect,other_space_indices)
+                            if (len(other_intersect) == 3):
+                                #if it is, quit your partner
+                                break_partner = True
+                                break
+
+                        #we java now
+                        if break_partner: break
+
+                        #actually apply the inference
+                        self.state[row, : ,idx] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
+                        self.state[partner, : ,idx] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
+            for col in range(9):
+                #get current box 
+                cur_space = self.state[:, col ,idx]
+                cur_space_indices = [i for i, x in enumerate(cur_space) if x == True] 
+                #search all other spaces
+                for partner in range(9):
+                    if partner == col: continue
+                    partner_space = self.state[:, partner ,idx]
+                    partner_space_indices = [i for i, x in enumerate(partner_space) if x == True] 
+
+                    #find the common numbers between two arbitrary spaces
+                    intersect = np.intersect1d(cur_space_indices,partner_space_indices)
+                    if len(intersect) == 3:
+                        
+                        break_partner = False
+                        for other in range(9):
+                            if other == col: continue
+                            if other == partner: continue
+                        
+                            other_space = self.state[:, other ,idx] 
+                            other_space_indices = [i for i, x in enumerate(other_space) if x == True] 
+                            #see if the common pair is unique
+                            other_intersect = np.intersect1d(intersect,other_space_indices)
+                            if (len(other_intersect) == 3):
+                                #if it is, quit your partner
+                                break_partner = True
+                                break
+
+                        #we java now
+                        if break_partner: break
+
+                        #actually apply the inference
+                        self.state[:, col ,idx] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
+                        self.state[:, partner ,idx] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
+
+            
+            for bx, by in np.ndindex(3, 3):
+                #get current box 
+                cur_space = self.state[by*3:3+by*3, bx*3:3+bx*3,idx].flatten()
+                cur_space_indices = [i for i, x in enumerate(cur_space) if x == True] 
+                #search all other spaces
+                for px, py in np.ndindex(3, 3):
+                    if px == bx and py == by: continue
+                    partner_space = self.state[py*3:3+py*3, px*3:3+px*3,idx].flatten()
+                    partner_space_indices = [i for i, x in enumerate(partner_space) if x == True] 
+
+                    #find the common numbers between two arbitrary spaces
+                    intersect = np.intersect1d(cur_space_indices,partner_space_indices)
+                    if len(intersect) == 3:
+                        
+                        break_partner = False
+                        for rx, ry in np.ndindex(3, 3):
+                            if rx == bx and ry == by: continue
+                            if rx == px and ry == py: continue
+                        
+                            other_space = self.state[ry*3:3+ry*3, rx*3:3+rx*3,idx].flatten() 
+                            other_space_indices = [i for i, x in enumerate(other_space) if x == True] 
+                            #see if the common pair is unique
+                            other_intersect = np.intersect1d(intersect,other_space_indices)
+                            if (len(other_intersect) == 3):
+                                #if it is, quit your partner
+                                break_partner = True
+                                break
+
+                        #we java now
+                        if break_partner: break
+
+                        #actually apply the inference
+                        self.state[by*3:3+by*3, bx*3:3+bx*3,idx] = np.asarray([True if np.isin(i,list(intersect)) else False for i in range(9) ]).reshape(3,3)
+                        self.state[py*3:3+py*3, px*3:3+px*3,idx] = np.asarray([True if np.isin(i,list(intersect)) else False for i in range(9) ]).reshape(3,3)
+        return np.any(self.state != old_state)
 
     def get_possible_actions(self, heuristic=True):
         assignments = []
@@ -96,6 +466,7 @@ class Sudoku:
         new_state = self.state.copy()
         assign_idx(new_state, y, x, idx)
         return Sudoku(new_state)
+
 
 
 # Assigns a value and enforces the basic rules of Sudoku:
