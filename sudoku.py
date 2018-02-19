@@ -29,16 +29,19 @@ class Sudoku:
                 continue
             if self.heuristic_hidden_singles():
                 continue
+            
             if self.heuristic_naked_pairs():
                 continue
-            """
+            
             if self.heuristic_hidden_pairs():
                 continue
+            
             if self.heuristic_naked_triples():
                 continue
             if self.heuristic_hidden_triples():
                 continue
-            """
+            
+            
             # Every heuristic is finished running: inference is done now
             break
 
@@ -95,12 +98,12 @@ class Sudoku:
         for idx in range(9):
             for row in range(9):
                 #get current box 
-                cur_space = self.state[row, : ,idx]
+                cur_space = self.state[row,idx]
                 cur_space_indices = [i for i, x in enumerate(cur_space) if x == True] 
                 #search all other spaces
                 for partner in range(9):
-                    if partner == row: continue
-                    partner_space = self.state[partner, : ,idx]
+                    if partner == idx: continue
+                    partner_space = self.state[row,partner]
                     partner_space_indices = [i for i, x in enumerate(partner_space) if x == True] 
 
                     #find the common numbers between two arbitrary spaces
@@ -109,10 +112,10 @@ class Sudoku:
                         
                         break_partner = False
                         for other in range(9):
-                            if other == row: continue
+                            if other == idx: continue
                             if other == partner: continue
                         
-                            other_space = self.state[other, : ,idx] 
+                            other_space = self.state[row,other]
                             other_space_indices = [i for i, x in enumerate(other_space) if x == True] 
                             #see if the common pair is unique
                             other_intersect = np.intersect1d(intersect,other_space_indices)
@@ -125,16 +128,16 @@ class Sudoku:
                         if break_partner: break
 
                         #actually apply the inference
-                        self.state[row, : ,idx] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
-                        self.state[partner, : ,idx] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
+                        self.state[row,idx] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
+                        self.state[row,partner] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
             for col in range(9):
                 #get current box 
-                cur_space = self.state[:, col ,idx]
+                cur_space = self.state[idx, col]
                 cur_space_indices = [i for i, x in enumerate(cur_space) if x == True] 
                 #search all other spaces
                 for partner in range(9):
-                    if partner == col: continue
-                    partner_space = self.state[:, partner ,idx]
+                    if partner == idx: continue
+                    partner_space = self.state[partner, col]
                     partner_space_indices = [i for i, x in enumerate(partner_space) if x == True] 
 
                     #find the common numbers between two arbitrary spaces
@@ -143,14 +146,14 @@ class Sudoku:
                         
                         break_partner = False
                         for other in range(9):
-                            if other == col: continue
+                            if other == idx: continue
                             if other == partner: continue
                         
-                            other_space = self.state[:, other ,idx] 
+                            other_space = self.state[col,idx] 
                             other_space_indices = [i for i, x in enumerate(other_space) if x == True] 
                             #see if the common pair is unique
                             other_intersect = np.intersect1d(intersect,other_space_indices)
-                            if (len(other_intersect) == 2):
+                            if (len(other_intersect) > 0):
                                 #if it is, quit your partner
                                 break_partner = True
                                 break
@@ -159,18 +162,19 @@ class Sudoku:
                         if break_partner: break
 
                         #actually apply the inference
-                        self.state[:, col ,idx] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
-                        self.state[:, partner ,idx] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
-
-            
-            for bx, by in np.ndindex(3, 3):
+                        self.state[idx, col ] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
+                        self.state[partner, col] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
+        
+        for ix, iy in np.ndindex(3, 3):
+            cur_box = self.state[iy*3:3+iy*3, ix*3:3+ix*3].reshape((9,9))
+            for idx in range(9):
                 #get current box 
-                cur_space = self.state[by*3:3+by*3, bx*3:3+bx*3,idx].flatten()
+                cur_space = cur_box[idx]
                 cur_space_indices = [i for i, x in enumerate(cur_space) if x == True] 
                 #search all other spaces
-                for px, py in np.ndindex(3, 3):
-                    if px == bx and py == by: continue
-                    partner_space = self.state[py*3:3+py*3, px*3:3+px*3,idx].flatten()
+                for partner in range(9):
+                    if partner == idx: continue
+                    partner_space = cur_box[partner]
                     partner_space_indices = [i for i, x in enumerate(partner_space) if x == True] 
 
                     #find the common numbers between two arbitrary spaces
@@ -178,15 +182,15 @@ class Sudoku:
                     if len(intersect) == 2:
                         
                         break_partner = False
-                        for rx, ry in np.ndindex(3, 3):
-                            if rx == bx and ry == by: continue
-                            if rx == px and ry == py: continue
+                        for other in range(9):
+                            if other == idx: continue
+                            if other == partner: continue
                         
-                            other_space = self.state[ry*3:3+ry*3, rx*3:3+rx*3,idx].flatten() 
+                            other_space = cur_box[other]
                             other_space_indices = [i for i, x in enumerate(other_space) if x == True] 
                             #see if the common pair is unique
                             other_intersect = np.intersect1d(intersect,other_space_indices)
-                            if (len(other_intersect) == 2):
+                            if (len(other_intersect) > 0):
                                 #if it is, quit your partner
                                 break_partner = True
                                 break
@@ -195,24 +199,26 @@ class Sudoku:
                         if break_partner: break
 
                         #actually apply the inference
-                        self.state[by*3:3+by*3, bx*3:3+bx*3,idx] = np.asarray([True if np.isin(i,list(intersect)) else False for i in range(9) ]).reshape(3,3)
-                        self.state[py*3:3+py*3, px*3:3+px*3,idx] = np.asarray([True if np.isin(i,list(intersect)) else False for i in range(9) ]).reshape(3,3)
+                        cur_box[idx] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
+                        cur_box[partner] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
+            self.state[iy*3:3+iy*3, ix*3:3+ix*3] = cur_box.reshape((3,3,9))
+            
         return np.any(self.state != old_state)
 
     def heuristic_naked_triples(self):
         old_state = self.state.copy()
-        for idx in range(9):
+        for triple in range(9):
             for partner in range(9):
-                for triple in range(9):
+                for idx in range(9):
                     if triple == partner: continue
+                    if idx == partner: continue
+                    if idx == triple : continue
 
                     for row in range(9):
-                        if row == partner: continue
-                        if row == triple: continue
-
-                        cur_space     = self.state[row,     : ,idx]
-                        partner_space = self.state[partner, : ,idx]
-                        triple_space  = self.state[triple,  : ,idx]
+                       
+                        cur_space     = self.state[row,idx]
+                        partner_space = self.state[row,partner]
+                        triple_space  = self.state[row,triple]
 
                         if cur_space.sum() == 2 and partner_space.sum() == 2 and triple_space.sum() == 2:
                             cur_space_indices     = [i for i, x in enumerate(cur_space) if x == True]
@@ -228,18 +234,15 @@ class Sudoku:
                             if len(union) == 3:
                                 # remove the union numbers from the rest
                                 for rest in range(9):
-                                    if rest == row or rest ==partner or rest == triple: continue
-                                    self.state[rest, : ,idx][union[0]] = False
-                                    self.state[rest, : ,idx][union[1]] = False
-                                    self.state[rest, : ,idx][union[2]] = False
+                                    if rest == idx or rest ==partner or rest == triple: continue
+                                    self.state[row,rest][union[0]] = False
+                                    self.state[row,rest][union[1]] = False
+                                    self.state[row,rest][union[2]] = False
 
                     for col in range(9):
-                        if col == partner: continue
-                        if col == triple : continue
-
-                        cur_space     = self.state[:,col,     idx]
-                        partner_space = self.state[:,partner, idx]
-                        triple_space  = self.state[:,triple,  idx]
+                        cur_space     = self.state[idx,col]
+                        partner_space = self.state[partner, col]
+                        triple_space  = self.state[triple,  col]
 
                         if cur_space.sum() == 2 and partner_space.sum() == 2 and triple_space.sum() == 2:
                             cur_space_indices     = [i for i, x in enumerate(cur_space) if x == True]
@@ -255,21 +258,18 @@ class Sudoku:
                             if len(union) == 3:
                                 # remove the union numbers from the rest
                                 for rest in range(9):
-                                    if rest == col or rest ==partner or rest == triple: continue
-                                    self.state[:,rest ,idx][union[0]] = False
-                                    self.state[:,rest ,idx][union[1]] = False
-                                    self.state[:,rest ,idx][union[2]] = False
-            
-            for px, py in np.ndindex(3, 3):
-                for tx, ty in np.ndindex(3, 3):
-                    for bx, by in np.ndindex(3, 3):
-                        if bx == tx and by == ty: continue
-                        if bx == px and by == py: continue
-                        if px == tx and py == ty: continue
+                                    if rest == idx or rest ==partner or rest == triple: continue
+                                    self.state[rest ,col][union[0]] = False
+                                    self.state[rest ,col][union[1]] = False
+                                    self.state[rest ,col][union[2]] = False
 
-                        cur_space     = self.state[by*3:3+by*3, bx*3:3+bx*3,idx].flatten()
-                        partner_space = self.state[py*3:3+py*3, px*3:3+px*3,idx].flatten()
-                        triple_space  = self.state[ty*3:3+ty*3, tx*3:3+tx*3,idx].flatten()
+            
+                    for ix, iy in np.ndindex(3, 3):
+                        cur_box = self.state[iy*3:3+iy*3, ix*3:3+ix*3].reshape((9,9))
+                       
+                        cur_space     = cur_box[idx]
+                        partner_space = cur_box[partner]
+                        triple_space  = cur_box[triple]
 
                         if cur_space.sum() == 2 and partner_space.sum() == 2 and triple_space.sum() == 2:
                             cur_space_indices     = [i for i, x in enumerate(cur_space) if x == True]
@@ -284,18 +284,12 @@ class Sudoku:
 
                             if len(union) == 3:
                                 # remove the union numbers from the rest
-                                for rx, ry in np.ndindex(3, 3):
-                                    if rx == bx and ry == by: continue
-                                    if rx == px and ry == py: continue
-                                    if rx == tx and ry == ty: continue
-
-                                    temp = np.asarray([True if np.isin(i,list(intersect)) else False for i in range(9) ]).reshape(3,3)
-                                    self.state[ry*3:3+ry*3, rx*3:3+rx*3,idx] = temp
-
-                                    self.state[:,rest ,idx][union[0]] = False
-                                    self.state[:,rest ,idx][union[1]] = False
-                                    self.state[:,rest ,idx][union[2]] = False
-                                
+                                for rest in range(9):
+                                    if rest == idx or rest ==partner or rest == triple: continue
+                                    cur_box[rest][union[0]] = False
+                                    cur_box[rest][union[1]] = False
+                                    cur_box[rest][union[2]] = False
+                        self.state[iy*3:3+iy*3, ix*3:3+ix*3] = cur_box.reshape((3,3,9))
         return np.any(self.state != old_state)
 
     #TODO: refactor this into "hidden n"
@@ -304,12 +298,12 @@ class Sudoku:
         for idx in range(9):
             for row in range(9):
                 #get current box 
-                cur_space = self.state[row, : ,idx]
-                cur_space_indices = [i for i, x in enumerate(cur_space) if x == True]
+                cur_space = self.state[row,idx]
+                cur_space_indices = [i for i, x in enumerate(cur_space) if x == True] 
                 #search all other spaces
                 for partner in range(9):
-                    if partner == row: continue
-                    partner_space = self.state[partner, : ,idx]
+                    if partner == idx: continue
+                    partner_space = self.state[row,partner]
                     partner_space_indices = [i for i, x in enumerate(partner_space) if x == True] 
 
                     #find the common numbers between two arbitrary spaces
@@ -318,14 +312,14 @@ class Sudoku:
                         
                         break_partner = False
                         for other in range(9):
-                            if other == row: continue
+                            if other == idx: continue
                             if other == partner: continue
                         
-                            other_space = self.state[other, : ,idx] 
+                            other_space = self.state[row,other]
                             other_space_indices = [i for i, x in enumerate(other_space) if x == True] 
                             #see if the common pair is unique
                             other_intersect = np.intersect1d(intersect,other_space_indices)
-                            if (len(other_intersect) == 3):
+                            if (len(other_intersect) > 0):
                                 #if it is, quit your partner
                                 break_partner = True
                                 break
@@ -334,16 +328,16 @@ class Sudoku:
                         if break_partner: break
 
                         #actually apply the inference
-                        self.state[row, : ,idx] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
-                        self.state[partner, : ,idx] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
+                        self.state[row,idx] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
+                        self.state[row,partner] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
             for col in range(9):
                 #get current box 
-                cur_space = self.state[:, col ,idx]
+                cur_space = self.state[idx, col]
                 cur_space_indices = [i for i, x in enumerate(cur_space) if x == True] 
                 #search all other spaces
                 for partner in range(9):
-                    if partner == col: continue
-                    partner_space = self.state[:, partner ,idx]
+                    if partner == idx: continue
+                    partner_space = self.state[partner, col]
                     partner_space_indices = [i for i, x in enumerate(partner_space) if x == True] 
 
                     #find the common numbers between two arbitrary spaces
@@ -352,14 +346,14 @@ class Sudoku:
                         
                         break_partner = False
                         for other in range(9):
-                            if other == col: continue
+                            if other == idx: continue
                             if other == partner: continue
                         
-                            other_space = self.state[:, other ,idx] 
+                            other_space = self.state[col,idx] 
                             other_space_indices = [i for i, x in enumerate(other_space) if x == True] 
                             #see if the common pair is unique
                             other_intersect = np.intersect1d(intersect,other_space_indices)
-                            if (len(other_intersect) == 3):
+                            if (len(other_intersect) > 0):
                                 #if it is, quit your partner
                                 break_partner = True
                                 break
@@ -368,18 +362,19 @@ class Sudoku:
                         if break_partner: break
 
                         #actually apply the inference
-                        self.state[:, col ,idx] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
-                        self.state[:, partner ,idx] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
+                        self.state[idx, col ] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
+                        self.state[partner, col] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
 
-            
-            for bx, by in np.ndindex(3, 3):
+        for ix, iy in np.ndindex(3, 3):
+            cur_box = self.state[iy*3:3+iy*3, ix*3:3+ix*3].reshape((9,9))
+            for idx in range(9):
                 #get current box 
-                cur_space = self.state[by*3:3+by*3, bx*3:3+bx*3,idx].flatten()
+                cur_space = cur_box[idx]
                 cur_space_indices = [i for i, x in enumerate(cur_space) if x == True] 
                 #search all other spaces
-                for px, py in np.ndindex(3, 3):
-                    if px == bx and py == by: continue
-                    partner_space = self.state[py*3:3+py*3, px*3:3+px*3,idx].flatten()
+                for partner in range(9):
+                    if partner == idx: continue
+                    partner_space = cur_box[partner]
                     partner_space_indices = [i for i, x in enumerate(partner_space) if x == True] 
 
                     #find the common numbers between two arbitrary spaces
@@ -387,15 +382,15 @@ class Sudoku:
                     if len(intersect) == 3:
                         
                         break_partner = False
-                        for rx, ry in np.ndindex(3, 3):
-                            if rx == bx and ry == by: continue
-                            if rx == px and ry == py: continue
+                        for other in range(9):
+                            if other == idx: continue
+                            if other == partner: continue
                         
-                            other_space = self.state[ry*3:3+ry*3, rx*3:3+rx*3,idx].flatten() 
+                            other_space = cur_box[other]
                             other_space_indices = [i for i, x in enumerate(other_space) if x == True] 
                             #see if the common pair is unique
                             other_intersect = np.intersect1d(intersect,other_space_indices)
-                            if (len(other_intersect) == 3):
+                            if (len(other_intersect) > 0):
                                 #if it is, quit your partner
                                 break_partner = True
                                 break
@@ -404,8 +399,10 @@ class Sudoku:
                         if break_partner: break
 
                         #actually apply the inference
-                        self.state[by*3:3+by*3, bx*3:3+bx*3,idx] = np.asarray([True if np.isin(i,list(intersect)) else False for i in range(9) ]).reshape(3,3)
-                        self.state[py*3:3+py*3, px*3:3+px*3,idx] = np.asarray([True if np.isin(i,list(intersect)) else False for i in range(9) ]).reshape(3,3)
+                        cur_box[idx] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
+                        cur_box[partner] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
+            self.state[iy*3:3+iy*3, ix*3:3+ix*3] = cur_box.reshape((3,3,9))
+
         return np.any(self.state != old_state)
 
     def get_possible_actions(self, heuristic=True):
