@@ -31,5 +31,9 @@ if __name__ == '__main__':
     print("Original Problem:")
     print(su)
     solution = backtrack_search(su)
-    print("Solution (required {} backtracks):".format(backtrack_count))
-    print(solution)
+    if solution:
+        print("Solution (required {} backtracks):".format(backtrack_count))
+        print(solution)
+    else:
+        print("FAILURE: NO SOLUTION")
+        exit(1)
