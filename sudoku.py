@@ -149,7 +149,7 @@ class Sudoku:
                             if other == idx: continue
                             if other == partner: continue
                         
-                            other_space = self.state[col,idx] 
+                            other_space = self.state[idx,col] 
                             other_space_indices = [i for i, x in enumerate(other_space) if x == True] 
                             #see if the common pair is unique
                             other_intersect = np.intersect1d(intersect,other_space_indices)
@@ -349,7 +349,7 @@ class Sudoku:
                             if other == idx: continue
                             if other == partner: continue
                         
-                            other_space = self.state[col,idx] 
+                            other_space = self.state[idx,col] 
                             other_space_indices = [i for i, x in enumerate(other_space) if x == True] 
                             #see if the common pair is unique
                             other_intersect = np.intersect1d(intersect,other_space_indices)
@@ -445,14 +445,22 @@ def assign_idx(state, y, x, idx):
     state[y, x, idx] = 1
     return state
 
+
 # Given a group of 9 squares (row, column, or box) and two indices, is there a naked pair?
 def naked_pair(group, pair):
+    # For each cell
     for i in range(9):
-        if group[i][pair].all() and not group[i][~pair].any():
+        # If this cell can only be the given pair
+        if group[i][pair].all() and group[i].sum() == 2:
             for j in range(i + 1, 9):
+                # And if another cell can only be the given pair
                 if all(group[j] == group[i]):
-                    group[[i, j], ~pair] = False
+                    # The other cells CANNOT be the given pair
+                    group[:, pair] = False
+                    group[i, pair] = True
+                    group[j, pair] = True
     return group
+
 
 # Loads example problems of the format at:
 # http://web.engr.oregonstate.edu/~tadepall/cs531/18/sudoku-problems.txt
