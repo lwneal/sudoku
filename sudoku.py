@@ -23,9 +23,24 @@ class Sudoku:
         return np.any(self.state.sum(axis=2) == 0)
 
     def inference(self):
-        heuristics = [getattr(self, h) for h in dir(self) if h.startswith('heuristic')]
-        while any(h() for h in heuristics):
-            pass
+        # If any heuristic changes something, go back and re-run all the heuristics
+        while True:
+            if self.heuristic_naked_singles():
+                continue
+            if self.heuristic_hidden_singles():
+                continue
+            if self.heuristic_naked_pairs():
+                continue
+            """
+            if self.heuristic_hidden_pairs():
+                continue
+            if self.heuristic_naked_triples():
+                continue
+            if self.heuristic_hidden_triples():
+                continue
+            """
+            # Every heuristic is finished running: inference is done now
+            break
 
     def heuristic_naked_singles(self):
         is_known = self.state.sum(axis=2) == 1
@@ -57,73 +72,27 @@ class Sudoku:
         # Return a nonzero value if this heuristic changed anything
         return np.any(self.state != old_state)
 
-
-
     def heuristic_naked_pairs(self):
         old_state = self.state.copy()
+        # Each "idx" is a number (ie. a possible value from 1 to 9)
         for idx in range(9):
-            for row in range(9):
-                #get current box 
-                cur_space = self.state[row, : ,idx]
-                #if its a pair
-                if cur_space.sum() == 2:
-                    #then find if there is another pair thats the same
-                    for partner in range(9):
-                        if partner == row: continue
-                        partner_space = self.state[partner, : ,idx]
-
-                        if (cur_space == partner_space).sum() == 9:
-                            pair_indices = [i for i, x in enumerate(cur_space) if x == True]
-                            #remove these numbers from all others
-                            for rest in range(9):
-                                if rest == row: continue
-                                if rest == partner: continue
-                                self.state[rest,:,idx][pair_indices[0]] = False
-                                self.state[rest,:,idx][pair_indices[1]] = False
-        
-            for col in range(9):
-                #get current box 
-                cur_space = self.state[:, col,idx]
-                #if its a pair
-                if cur_space.sum() == 2:
-                    #then find if there is another pair thats the same
-                    for partner in range(9):
-                        if partner == col: continue
-                        partner_space = self.state[partner, : ,idx]
-
-                        if (cur_space == partner_space).sum() == 9:
-                            pair_indices = [i for i, x in enumerate(cur_space) if x == True]
-                            #remove these numbers from all others
-                            for rest in range(9):
-                                if rest == col: continue
-                                if rest == partner: continue
-                                self.state[:,rest,idx][pair_indices[0]] = False
-                                self.state[:,rest,idx][pair_indices[1]] = False
-            
-            for bx, by in np.ndindex(3, 3):
-                #get current box 
-                cur_space = self.state[by*3:3+by*3, bx*3:3+bx*3,idx]
-                #if its a pair
-                if cur_space.sum() == 2:
-                    #then find if there is another pair thats the same
-                    for px, py in np.ndindex(3, 3):
-                        if px == bx and py == by: continue
-                        partner_space = self.state[py*3:3+py*3, px*3:3+px*3,idx]
-
-                        if (cur_space == partner_space).sum() == 9:
-                            pair_indices_x = []
-                            pair_indices_y = []
-                            for x,y in np.ndindex(3, 3):
-                                if cur_space[x][y] == True:
-                                    pair_indices_x.append(x)
-                                    pair_indices_y.append(y)
-                            #remove these numbers from all others
-                            for rx, ry in np.ndindex(3, 3):
-                                if rx == bx and ry == by: continue
-                                if rx == px and ry == py: continue
-                                self.state[ry*3:3+ry*3, rx*3:3+rx*3,idx][pair_indices_x[0]][pair_indices_y[0]] = False
-                                self.state[ry*3:3+ry*3, rx*3:3+rx*3,idx][pair_indices_x[1]][pair_indices_y[1]] = False
+            for partner_idx in range(idx + 1, 9):
+                pair = np.array([idx, partner_idx])
+                # Each row is a y-coordinate. Row 0 is at the top of the 9x9 grid
+                for row in range(9):
+                    if is_naked(self.state[row, :][pair]):
+                        self.state[row, :, ~pair] = False
+                # Each column is an x-coordinate. Col 0 is on the left
+                for col in range(9):
+                    if is_naked(self.state[:, col][pair]):
+                        self.state[:, col, ~pair] = False
+                # There are 9 boxes, each is 3x3 and contains 9 squares
+                for bx, by in np.ndindex(3, 3):
+                    box = self.state[by*3:3+by*3, bx*3:3+bx*3].reshape((9,9))
+                    if is_naked(box[pair]):
+                        self.state[by*3:3+by*3, bx*3:3+bx*3, ~pair] = False
         return np.any(self.state != old_state)
+        
         
 
     def heuristic_hidden_pairs(self):
@@ -152,7 +121,7 @@ class Sudoku:
                             other_space_indices = [i for i, x in enumerate(other_space) if x == True] 
                             #see if the common pair is unique
                             other_intersect = np.intersect1d(intersect,other_space_indices)
-                            if (len(other_intersect) == 2):
+                            if (len(other_intersect) > 0):
                                 #if it is, quit your partner
                                 break_partner = True
                                 break
@@ -484,6 +453,8 @@ def assign_idx(state, y, x, idx):
     state[y, x, idx] = 1
     return state
 
+def is_naked(group, n=2):
+    return all(s == n for s in group.sum(0)) and all(s == n for s in group.sum(1))
 
 # Loads example problems of the format at:
 # http://web.engr.oregonstate.edu/~tadepall/cs531/18/sudoku-problems.txt
