@@ -80,20 +80,15 @@ class Sudoku:
                 pair = np.array([idx, partner_idx])
                 # Each row is a y-coordinate. Row 0 is at the top of the 9x9 grid
                 for row in range(9):
-                    if is_naked(self.state[row, :][pair]):
-                        self.state[row, :, ~pair] = False
+                    naked_pair(self.state[row, :], pair)
                 # Each column is an x-coordinate. Col 0 is on the left
                 for col in range(9):
-                    if is_naked(self.state[:, col][pair]):
-                        self.state[:, col, ~pair] = False
+                    naked_pair(self.state[:, col], pair)
                 # There are 9 boxes, each is 3x3 and contains 9 squares
                 for bx, by in np.ndindex(3, 3):
-                    box = self.state[by*3:3+by*3, bx*3:3+bx*3].reshape((9,9))
-                    if is_naked(box[pair]):
-                        self.state[by*3:3+by*3, bx*3:3+bx*3, ~pair] = False
+                    box = self.state[by*3:by*3 + 3, bx*3:bx*3 + 3].reshape((9,9))
+                    naked_pair(box, pair)
         return np.any(self.state != old_state)
-        
-        
 
     def heuristic_hidden_pairs(self):
         old_state = self.state.copy()
@@ -453,8 +448,14 @@ def assign_idx(state, y, x, idx):
     state[y, x, idx] = 1
     return state
 
-def is_naked(group, n=2):
-    return all(s == n for s in group.sum(0)) and all(s == n for s in group.sum(1))
+# Given a group of 9 squares (row, column, or box) and two indices, is there a naked pair?
+def naked_pair(group, pair):
+    for i in range(9):
+        if group[i][pair].all() and not group[i][~pair].any():
+            for j in range(i + 1, 9):
+                if all(group[j] == group[i]):
+                    group[[i, j], ~pair] = False
+    return group
 
 # Loads example problems of the format at:
 # http://web.engr.oregonstate.edu/~tadepall/cs531/18/sudoku-problems.txt
