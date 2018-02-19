@@ -5,12 +5,15 @@ import sys
 import sudoku
 
 backtrack_count = 0
+MAX_BACKTRACK = 100
 
 def backtrack_search(prob, count=0):
     global backtrack_count
     prob.inference()
     if prob.is_impossible():
         backtrack_count += 1
+        if backtrack_count > MAX_BACKTRACK:
+            raise Exception("Too many backtracks")
         return None
     if prob.is_solved():
         return prob
@@ -19,6 +22,8 @@ def backtrack_search(prob, count=0):
         if result:
             return result
     backtrack_count += 1
+    if backtrack_count > MAX_BACKTRACK:
+        raise Exception("Too many backtracks")
     return None
 
 
