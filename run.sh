@@ -3,11 +3,14 @@ set -e
 
 echo "Running Sudoku solver"
 
-for level in easy medium hard evil; do
-    echo "Attempting to solve all problems at level $level"
-    for i in `find problems/ | grep $level`; do
-        echo "Solving $i"
-        python main.py $i;
+
+for heuristic_level in 0 1 2 3 4 5; do 
+    OUTPUT_FILENAME="results_heuristic_level_$heuristic_level.txt"
+    for difficulty in easy medium hard evil; do
+        echo "Attempting to solve all problems difficulty $difficulty heuristic level $heuristic_level"
+        for filename in `find problems/ | grep $difficulty`; do
+            echo "Solving $filename with heuristic level $heuristic_level"
+            python main.py $filename $heuristic_level >> $OUTPUT_FILENAME
+        done
     done
-    echo
 done
