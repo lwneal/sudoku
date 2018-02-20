@@ -5,7 +5,7 @@ import sys
 import sudoku
 
 backtrack_count = 0
-MAX_BACKTRACK = 100
+MAX_BACKTRACK = 10
 
 def backtrack_search(prob, count=0):
     global backtrack_count
@@ -32,12 +32,13 @@ if __name__ == '__main__':
         print("Usage: python {} puzzle.txt".format(sys.argv[0]))
         print("  For example puzzle.txt files see problems/")
         exit()
-    su = sudoku.from_file(sys.argv[1])
+    filename = sys.argv[1]
+    su = sudoku.from_file(filename)
     print("Original Problem:")
     print(su)
     solution = backtrack_search(su)
     if solution:
-        print("Solution (required {} backtracks):".format(backtrack_count))
+        print("Solved {} with {} backtracks:".format(filename, backtrack_count))
         print(solution)
     else:
         print("FAILURE: NO SOLUTION")
