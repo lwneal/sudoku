@@ -2,12 +2,13 @@
 Solving Sudoku using Backtracking Search with Constraint Propagation
 """
 import sys
+import time
 import sudoku
 
 backtrack_count = 0
 MAX_BACKTRACK = 10
 
-def backtrack_search(prob, count=0):
+def backtrack_search(prob, heuristic_level=5, use_mrv=False):
     global backtrack_count
     prob.inference()
     if prob.is_impossible():
@@ -17,7 +18,7 @@ def backtrack_search(prob, count=0):
         return None
     if prob.is_solved():
         return prob
-    for y, x, val in prob.get_possible_actions():
+    for y, x, val in prob.get_possible_actions(use_mrv):
         result = backtrack_search(prob.take_action(y, x, val))
         if result:
             return result
@@ -36,10 +37,14 @@ if __name__ == '__main__':
     su = sudoku.from_file(filename)
     print("Original Problem:")
     print(su)
-    solution = backtrack_search(su)
+    start = time.time()
+    try:
+        solution = backtrack_search(su)
+    except:
+        solution = None
+    duration = time.time() - start
     if solution:
-        print("Solved {} with {} backtracks:".format(filename, backtrack_count))
+        print("Solved {} with {} backtracks in {:.2f} sec:".format(filename, backtrack_count, duration))
         print(solution)
     else:
-        print("FAILURE: NO SOLUTION")
-        exit(1)
+        print("Failed {} after hitting limit of {} backtracks".format(filename, backtrack_count))
