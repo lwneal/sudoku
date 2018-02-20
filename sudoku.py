@@ -29,19 +29,16 @@ class Sudoku:
                 continue
             if self.heuristic_hidden_singles():
                 continue
-            
             if self.heuristic_naked_pairs():
                 continue
-            
             if self.heuristic_hidden_pairs():
                 continue
-            
+            """
             if self.heuristic_naked_triples():
                 continue
             if self.heuristic_hidden_triples():
                 continue
-            
-            
+            """
             # Every heuristic is finished running: inference is done now
             break
 
@@ -78,132 +75,31 @@ class Sudoku:
     def heuristic_naked_pairs(self):
         old_state = self.state.copy()
         # Each "idx" is a number (ie. a possible value from 1 to 9)
-        for idx in range(9):
-            for partner_idx in range(idx + 1, 9):
-                pair = np.array([idx, partner_idx])
-                # Each row is a y-coordinate. Row 0 is at the top of the 9x9 grid
-                for row in range(9):
-                    naked_pair(self.state[row, :], pair)
-                # Each column is an x-coordinate. Col 0 is on the left
-                for col in range(9):
-                    naked_pair(self.state[:, col], pair)
-                # There are 9 boxes, each is 3x3 and contains 9 squares
-                for bx, by in np.ndindex(3, 3):
-                    box = self.state[by*3:by*3 + 3, bx*3:bx*3 + 3].reshape((9,9))
-                    result = naked_pair(box, pair)
-                    self.state[by*3:by*3 + 3, bx*3:bx*3 + 3] = result.reshape((3,3,9))
+        for number_pair in pairs():
+            # Each row is a y-coordinate. Row 0 is at the top of the 9x9 grid
+            for row in range(9):
+                naked_pair(self.state[row, :], number_pair)
+            # Each column is an x-coordinate. Col 0 is on the left
+            for col in range(9):
+                naked_pair(self.state[:, col], number_pair)
+            # There are 9 boxes, each is 3x3 and contains 9 squares
+            for bx, by in np.ndindex(3, 3):
+                box = self.state[by*3:by*3 + 3, bx*3:bx*3 + 3].reshape((9,9))
+                result = naked_pair(box, number_pair)
+                self.state[by*3:by*3 + 3, bx*3:bx*3 + 3] = result.reshape((3,3,9))
         return np.any(self.state != old_state)
 
     def heuristic_hidden_pairs(self):
         old_state = self.state.copy()
-        for idx in range(9):
+        for number_pair in pairs():
             for row in range(9):
-                #get current box 
-                cur_space = self.state[row,idx]
-                cur_space_indices = [i for i, x in enumerate(cur_space) if x == True] 
-                #search all other spaces
-                for partner in range(9):
-                    if partner == idx: continue
-                    partner_space = self.state[row,partner]
-                    partner_space_indices = [i for i, x in enumerate(partner_space) if x == True] 
-
-                    #find the common numbers between two arbitrary spaces
-                    intersect = np.intersect1d(cur_space_indices,partner_space_indices)
-                    if len(intersect) == 2:
-                        
-                        break_partner = False
-                        for other in range(9):
-                            if other == idx: continue
-                            if other == partner: continue
-                        
-                            other_space = self.state[row,other]
-                            other_space_indices = [i for i, x in enumerate(other_space) if x == True] 
-                            #see if the common pair is unique
-                            other_intersect = np.intersect1d(intersect,other_space_indices)
-                            if (len(other_intersect) > 0):
-                                #if it is, quit your partner
-                                break_partner = True
-                                break
-
-                        #we java now
-                        if break_partner: break
-
-                        #actually apply the inference
-                        self.state[row,idx] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
-                        self.state[row,partner] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
+                hidden_pair(self.state[row, :], number_pair)
             for col in range(9):
-                #get current box 
-                cur_space = self.state[idx, col]
-                cur_space_indices = [i for i, x in enumerate(cur_space) if x == True] 
-                #search all other spaces
-                for partner in range(9):
-                    if partner == idx: continue
-                    partner_space = self.state[partner, col]
-                    partner_space_indices = [i for i, x in enumerate(partner_space) if x == True] 
-
-                    #find the common numbers between two arbitrary spaces
-                    intersect = np.intersect1d(cur_space_indices,partner_space_indices)
-                    if len(intersect) == 2:
-                        
-                        break_partner = False
-                        for other in range(9):
-                            if other == idx: continue
-                            if other == partner: continue
-                        
-                            other_space = self.state[idx,col] 
-                            other_space_indices = [i for i, x in enumerate(other_space) if x == True] 
-                            #see if the common pair is unique
-                            other_intersect = np.intersect1d(intersect,other_space_indices)
-                            if (len(other_intersect) > 0):
-                                #if it is, quit your partner
-                                break_partner = True
-                                break
-
-                        #we java now
-                        if break_partner: break
-
-                        #actually apply the inference
-                        self.state[idx, col ] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
-                        self.state[partner, col] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
-        
-        for ix, iy in np.ndindex(3, 3):
-            cur_box = self.state[iy*3:3+iy*3, ix*3:3+ix*3].reshape((9,9))
-            for idx in range(9):
-                #get current box 
-                cur_space = cur_box[idx]
-                cur_space_indices = [i for i, x in enumerate(cur_space) if x == True] 
-                #search all other spaces
-                for partner in range(9):
-                    if partner == idx: continue
-                    partner_space = cur_box[partner]
-                    partner_space_indices = [i for i, x in enumerate(partner_space) if x == True] 
-
-                    #find the common numbers between two arbitrary spaces
-                    intersect = np.intersect1d(cur_space_indices,partner_space_indices)
-                    if len(intersect) == 2:
-                        
-                        break_partner = False
-                        for other in range(9):
-                            if other == idx: continue
-                            if other == partner: continue
-                        
-                            other_space = cur_box[other]
-                            other_space_indices = [i for i, x in enumerate(other_space) if x == True] 
-                            #see if the common pair is unique
-                            other_intersect = np.intersect1d(intersect,other_space_indices)
-                            if (len(other_intersect) > 0):
-                                #if it is, quit your partner
-                                break_partner = True
-                                break
-
-                        #we java now
-                        if break_partner: break
-
-                        #actually apply the inference
-                        cur_box[idx] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
-                        cur_box[partner] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
-            self.state[iy*3:3+iy*3, ix*3:3+ix*3] = cur_box.reshape((3,3,9))
-            
+                hidden_pair(self.state[:, col], number_pair)
+            for bx, by in np.ndindex(3, 3):
+                box = self.state[by*3:by*3 + 3, bx*3:bx*3 + 3].reshape((9,9))
+                result = hidden_pair(box, number_pair)
+                self.state[by*3:by*3 + 3, bx*3:bx*3 + 3] = result.reshape((3,3,9))
         return np.any(self.state != old_state)
 
     def heuristic_naked_triples(self):
@@ -447,7 +343,14 @@ def assign_idx(state, y, x, idx):
     return state
 
 
-# Given a group of 9 squares (row, column, or box) and two indices, is there a naked pair?
+# Count all the distinct pairs of elements one through nine
+def pairs():
+    for i in range(9):
+        for j in range(i + 1, 9):
+            yield np.array([i, j])
+
+
+# Given a group of 9 cells (row, column, or box) and two indices, is there a naked pair?
 def naked_pair(group, pair):
     # For each cell
     for i in range(9):
@@ -456,12 +359,27 @@ def naked_pair(group, pair):
             for j in range(i + 1, 9):
                 # And if another cell can only be the given pair
                 if all(group[j] == group[i]):
-                    # The other cells CANNOT be the given pair
+                    # Other cells CANNOT contain the given pair of numbers
                     group[:, pair] = False
                     group[i, pair] = True
                     group[j, pair] = True
     return group
 
+
+# Given a group of 9 cells, does the given pair of numbers form a hidden pair?
+def hidden_pair(group, number_pair):
+    # Does each number occur only twice?
+    if all(s == 2 for s in group[:, number_pair].sum(0)):
+        # Does each number occur twice in the same place?
+        for cell_pair in pairs():
+            if all(group[cell_pair, number].all() for number in number_pair):
+                # Other numbers CANNOT occur in this pair of cells
+                group[cell_pair, :] = False
+                for i in cell_pair:
+                    for j in number_pair:
+                        group[i, j] = True
+    return group
+    
 
 # Loads example problems of the format at:
 # http://web.engr.oregonstate.edu/~tadepall/cs531/18/sudoku-problems.txt
