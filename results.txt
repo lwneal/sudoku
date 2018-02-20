@@ -1,0 +1,924 @@
+Solved problems//easy_44.txt heuristic_level 0 mrv True with 36 backtracks in 0.01 sec:
+Failed problems//easy_50.txt after hitting limit of 101 backtracks
+Failed problems//easy_43.txt after hitting limit of 101 backtracks
+Failed problems//easy_42.txt after hitting limit of 101 backtracks
+Failed problems//easy_68.txt after hitting limit of 101 backtracks
+Failed problems//easy_69.txt after hitting limit of 101 backtracks
+Solved problems//easy_41.txt heuristic_level 0 mrv True with 45 backtracks in 0.01 sec:
+Failed problems//easy_55.txt after hitting limit of 101 backtracks
+Failed problems//easy_19.txt after hitting limit of 101 backtracks
+Failed problems//easy_30.txt after hitting limit of 101 backtracks
+Failed problems//easy_18.txt after hitting limit of 101 backtracks
+Failed problems//easy_20.txt after hitting limit of 101 backtracks
+Failed problems//easy_07.txt after hitting limit of 101 backtracks
+Failed problems//easy_06.txt after hitting limit of 101 backtracks
+Failed problems//easy_05.txt after hitting limit of 101 backtracks
+Failed problems//easy_01.txt after hitting limit of 101 backtracks
+Failed problems//easy_29.txt after hitting limit of 101 backtracks
+Failed problems//easy_17.txt after hitting limit of 101 backtracks
+Failed problems//easy_70.txt after hitting limit of 101 backtracks
+Failed problems//easy_67.txt after hitting limit of 101 backtracks
+Failed problems//easy_62.txt after hitting limit of 101 backtracks
+Solved problems//easy_61.txt heuristic_level 0 mrv True with 42 backtracks in 0.02 sec:
+Failed problems//easy_49.txt after hitting limit of 101 backtracks
+Failed problems//medium_72.txt after hitting limit of 101 backtracks
+Failed problems//medium_73.txt after hitting limit of 101 backtracks
+Failed problems//medium_71.txt after hitting limit of 101 backtracks
+Failed problems//medium_64.txt after hitting limit of 101 backtracks
+Failed problems//medium_74.txt after hitting limit of 101 backtracks
+Failed problems//medium_63.txt after hitting limit of 101 backtracks
+Failed problems//medium_10.txt after hitting limit of 101 backtracks
+Failed problems//medium_02.txt after hitting limit of 101 backtracks
+Failed problems//medium_24.txt after hitting limit of 101 backtracks
+Solved problems//medium_31.txt heuristic_level 0 mrv True with 17 backtracks in 0.02 sec:
+Failed problems//medium_22.txt after hitting limit of 101 backtracks
+Failed problems//medium_36.txt after hitting limit of 101 backtracks
+Failed problems//medium_23.txt after hitting limit of 101 backtracks
+Failed problems//medium_35.txt after hitting limit of 101 backtracks
+Failed problems//medium_21.txt after hitting limit of 101 backtracks
+Failed problems//medium_08.txt after hitting limit of 101 backtracks
+Failed problems//medium_46.txt after hitting limit of 101 backtracks
+Failed problems//medium_45.txt after hitting limit of 101 backtracks
+Failed problems//medium_54.txt after hitting limit of 101 backtracks
+Failed problems//medium_56.txt after hitting limit of 101 backtracks
+Solved problems//medium_57.txt heuristic_level 0 mrv True with 53 backtracks in 0.02 sec:
+Solved problems//hard_66.txt heuristic_level 0 mrv True with 14 backtracks in 0.03 sec:
+Failed problems//hard_59.txt after hitting limit of 101 backtracks
+Failed problems//hard_65.txt after hitting limit of 101 backtracks
+Failed problems//hard_58.txt after hitting limit of 101 backtracks
+Failed problems//hard_75.txt after hitting limit of 101 backtracks
+Failed problems//hard_77.txt after hitting limit of 101 backtracks
+Solved problems//hard_76.txt heuristic_level 0 mrv True with 18 backtracks in 0.03 sec:
+Solved problems//hard_11.txt heuristic_level 0 mrv True with 39 backtracks in 0.02 sec:
+Failed problems//hard_38.txt after hitting limit of 101 backtracks
+Failed problems//hard_12.txt after hitting limit of 101 backtracks
+Failed problems//hard_13.txt after hitting limit of 101 backtracks
+Failed problems//hard_03.txt after hitting limit of 101 backtracks
+Failed problems//hard_33.txt after hitting limit of 101 backtracks
+Failed problems//hard_26.txt after hitting limit of 101 backtracks
+Failed problems//hard_32.txt after hitting limit of 101 backtracks
+Solved problems//hard_37.txt heuristic_level 0 mrv True with 30 backtracks in 0.02 sec:
+Failed problems//hard_47.txt after hitting limit of 101 backtracks
+Failed problems//hard_53.txt after hitting limit of 101 backtracks
+Failed problems//evil_16.txt after hitting limit of 101 backtracks
+Solved problems//evil_15.txt heuristic_level 0 mrv True with 0 backtracks in 0.03 sec:
+Failed problems//evil_14.txt after hitting limit of 101 backtracks
+Failed problems//evil_28.txt after hitting limit of 101 backtracks
+Failed problems//evil_04.txt after hitting limit of 101 backtracks
+Failed problems//evil_39.txt after hitting limit of 101 backtracks
+Failed problems//evil_60.txt after hitting limit of 101 backtracks
+Solved problems//evil_48.txt heuristic_level 0 mrv True with 17 backtracks in 0.02 sec:
+Failed problems//evil_40.txt after hitting limit of 101 backtracks
+Failed problems//evil_52.txt after hitting limit of 101 backtracks
+Failed problems//evil_51.txt after hitting limit of 101 backtracks
+Failed problems//evil_34.txt after hitting limit of 101 backtracks
+Solved problems//evil_09.txt heuristic_level 0 mrv True with 12 backtracks in 0.02 sec:
+Failed problems//evil_25.txt after hitting limit of 101 backtracks
+Failed problems//evil_27.txt after hitting limit of 101 backtracks
+Failed problems//easy_44.txt after hitting limit of 101 backtracks
+Failed problems//easy_50.txt after hitting limit of 101 backtracks
+Failed problems//easy_43.txt after hitting limit of 101 backtracks
+Failed problems//easy_42.txt after hitting limit of 101 backtracks
+Failed problems//easy_68.txt after hitting limit of 101 backtracks
+Solved problems//easy_69.txt heuristic_level 0 mrv False with 18 backtracks in 0.01 sec:
+Failed problems//easy_41.txt after hitting limit of 101 backtracks
+Failed problems//easy_55.txt after hitting limit of 101 backtracks
+Solved problems//easy_19.txt heuristic_level 0 mrv False with 28 backtracks in 0.01 sec:
+Failed problems//easy_30.txt after hitting limit of 101 backtracks
+Failed problems//easy_18.txt after hitting limit of 101 backtracks
+Failed problems//easy_20.txt after hitting limit of 101 backtracks
+Failed problems//easy_07.txt after hitting limit of 101 backtracks
+Failed problems//easy_06.txt after hitting limit of 101 backtracks
+Failed problems//easy_05.txt after hitting limit of 101 backtracks
+Failed problems//easy_01.txt after hitting limit of 101 backtracks
+Failed problems//easy_29.txt after hitting limit of 101 backtracks
+Failed problems//easy_17.txt after hitting limit of 101 backtracks
+Failed problems//easy_70.txt after hitting limit of 101 backtracks
+Failed problems//easy_67.txt after hitting limit of 101 backtracks
+Failed problems//easy_62.txt after hitting limit of 101 backtracks
+Solved problems//easy_61.txt heuristic_level 0 mrv False with 16 backtracks in 0.01 sec:
+Failed problems//easy_49.txt after hitting limit of 101 backtracks
+Failed problems//medium_72.txt after hitting limit of 101 backtracks
+Failed problems//medium_73.txt after hitting limit of 101 backtracks
+Failed problems//medium_71.txt after hitting limit of 101 backtracks
+Failed problems//medium_64.txt after hitting limit of 101 backtracks
+Failed problems//medium_74.txt after hitting limit of 101 backtracks
+Failed problems//medium_63.txt after hitting limit of 101 backtracks
+Failed problems//medium_10.txt after hitting limit of 101 backtracks
+Failed problems//medium_02.txt after hitting limit of 101 backtracks
+Failed problems//medium_24.txt after hitting limit of 101 backtracks
+Failed problems//medium_31.txt after hitting limit of 101 backtracks
+Failed problems//medium_22.txt after hitting limit of 101 backtracks
+Failed problems//medium_36.txt after hitting limit of 101 backtracks
+Failed problems//medium_23.txt after hitting limit of 101 backtracks
+Failed problems//medium_35.txt after hitting limit of 101 backtracks
+Failed problems//medium_21.txt after hitting limit of 101 backtracks
+Solved problems//medium_08.txt heuristic_level 0 mrv False with 69 backtracks in 0.02 sec:
+Solved problems//medium_46.txt heuristic_level 0 mrv False with 37 backtracks in 0.02 sec:
+Failed problems//medium_45.txt after hitting limit of 101 backtracks
+Failed problems//medium_54.txt after hitting limit of 101 backtracks
+Failed problems//medium_56.txt after hitting limit of 101 backtracks
+Solved problems//medium_57.txt heuristic_level 0 mrv False with 14 backtracks in 0.01 sec:
+Solved problems//hard_66.txt heuristic_level 0 mrv False with 31 backtracks in 0.01 sec:
+Failed problems//hard_59.txt after hitting limit of 101 backtracks
+Solved problems//hard_65.txt heuristic_level 0 mrv False with 35 backtracks in 0.01 sec:
+Failed problems//hard_58.txt after hitting limit of 101 backtracks
+Failed problems//hard_75.txt after hitting limit of 101 backtracks
+Failed problems//hard_77.txt after hitting limit of 101 backtracks
+Solved problems//hard_76.txt heuristic_level 0 mrv False with 50 backtracks in 0.01 sec:
+Failed problems//hard_11.txt after hitting limit of 101 backtracks
+Failed problems//hard_38.txt after hitting limit of 101 backtracks
+Failed problems//hard_12.txt after hitting limit of 101 backtracks
+Failed problems//hard_13.txt after hitting limit of 101 backtracks
+Failed problems//hard_03.txt after hitting limit of 101 backtracks
+Failed problems//hard_33.txt after hitting limit of 101 backtracks
+Failed problems//hard_26.txt after hitting limit of 101 backtracks
+Failed problems//hard_32.txt after hitting limit of 101 backtracks
+Failed problems//hard_37.txt after hitting limit of 101 backtracks
+Failed problems//hard_47.txt after hitting limit of 101 backtracks
+Failed problems//hard_53.txt after hitting limit of 101 backtracks
+Failed problems//evil_16.txt after hitting limit of 101 backtracks
+Solved problems//evil_15.txt heuristic_level 0 mrv False with 0 backtracks in 0.01 sec:
+Failed problems//evil_14.txt after hitting limit of 101 backtracks
+Failed problems//evil_28.txt after hitting limit of 101 backtracks
+Failed problems//evil_04.txt after hitting limit of 101 backtracks
+Failed problems//evil_39.txt after hitting limit of 101 backtracks
+Failed problems//evil_60.txt after hitting limit of 101 backtracks
+Failed problems//evil_48.txt after hitting limit of 101 backtracks
+Failed problems//evil_40.txt after hitting limit of 101 backtracks
+Failed problems//evil_52.txt after hitting limit of 101 backtracks
+Failed problems//evil_51.txt after hitting limit of 101 backtracks
+Failed problems//evil_34.txt after hitting limit of 101 backtracks
+Failed problems//evil_09.txt after hitting limit of 101 backtracks
+Failed problems//evil_25.txt after hitting limit of 101 backtracks
+Failed problems//evil_27.txt after hitting limit of 101 backtracks
+Solved problems//easy_44.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_50.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_43.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_42.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_68.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_69.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_41.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_55.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_19.txt heuristic_level 1 mrv True with 1 backtracks in 0.01 sec:
+Solved problems//easy_30.txt heuristic_level 1 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//easy_18.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_20.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_07.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_06.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_05.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_01.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_29.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_17.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_70.txt heuristic_level 1 mrv True with 1 backtracks in 0.01 sec:
+Solved problems//easy_67.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_62.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_61.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_49.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Failed problems//medium_72.txt after hitting limit of 101 backtracks
+Solved problems//medium_73.txt heuristic_level 1 mrv True with 0 backtracks in 0.01 sec:
+Failed problems//medium_71.txt after hitting limit of 101 backtracks
+Solved problems//medium_64.txt heuristic_level 1 mrv True with 1 backtracks in 0.01 sec:
+Failed problems//medium_74.txt after hitting limit of 101 backtracks
+Solved problems//medium_63.txt heuristic_level 1 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//medium_10.txt heuristic_level 1 mrv True with 1 backtracks in 0.01 sec:
+Solved problems//medium_02.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Failed problems//medium_24.txt after hitting limit of 101 backtracks
+Solved problems//medium_31.txt heuristic_level 1 mrv True with 2 backtracks in 0.01 sec:
+Solved problems//medium_22.txt heuristic_level 1 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//medium_36.txt heuristic_level 1 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//medium_23.txt heuristic_level 1 mrv True with 2 backtracks in 0.02 sec:
+Solved problems//medium_35.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Failed problems//medium_21.txt after hitting limit of 101 backtracks
+Failed problems//medium_08.txt after hitting limit of 101 backtracks
+Solved problems//medium_46.txt heuristic_level 1 mrv True with 2 backtracks in 0.01 sec:
+Solved problems//medium_45.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//medium_54.txt heuristic_level 1 mrv True with 2 backtracks in 0.02 sec:
+Solved problems//medium_56.txt heuristic_level 1 mrv True with 2 backtracks in 0.01 sec:
+Solved problems//medium_57.txt heuristic_level 1 mrv True with 1 backtracks in 0.01 sec:
+Failed problems//hard_66.txt after hitting limit of 101 backtracks
+Failed problems//hard_59.txt after hitting limit of 101 backtracks
+Solved problems//hard_65.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//hard_58.txt heuristic_level 1 mrv True with 0 backtracks in 0.01 sec:
+Failed problems//hard_75.txt after hitting limit of 101 backtracks
+Failed problems//hard_77.txt after hitting limit of 101 backtracks
+Failed problems//hard_76.txt after hitting limit of 101 backtracks
+Failed problems//hard_11.txt after hitting limit of 101 backtracks
+Failed problems//hard_38.txt after hitting limit of 101 backtracks
+Failed problems//hard_12.txt after hitting limit of 101 backtracks
+Failed problems//hard_13.txt after hitting limit of 101 backtracks
+Solved problems//hard_03.txt heuristic_level 1 mrv True with 1 backtracks in 0.01 sec:
+Solved problems//hard_33.txt heuristic_level 1 mrv True with 1 backtracks in 0.01 sec:
+Failed problems//hard_26.txt after hitting limit of 101 backtracks
+Failed problems//hard_32.txt after hitting limit of 101 backtracks
+Failed problems//hard_37.txt after hitting limit of 101 backtracks
+Solved problems//hard_47.txt heuristic_level 1 mrv True with 1 backtracks in 0.01 sec:
+Solved problems//hard_53.txt heuristic_level 1 mrv True with 2 backtracks in 0.01 sec:
+Solved problems//evil_16.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Failed problems//evil_15.txt after hitting limit of 101 backtracks
+Failed problems//evil_14.txt after hitting limit of 101 backtracks
+Failed problems//evil_28.txt after hitting limit of 101 backtracks
+Failed problems//evil_04.txt after hitting limit of 101 backtracks
+Failed problems//evil_39.txt after hitting limit of 101 backtracks
+Failed problems//evil_60.txt after hitting limit of 101 backtracks
+Failed problems//evil_48.txt after hitting limit of 101 backtracks
+Failed problems//evil_40.txt after hitting limit of 101 backtracks
+Failed problems//evil_52.txt after hitting limit of 101 backtracks
+Failed problems//evil_51.txt after hitting limit of 101 backtracks
+Failed problems//evil_34.txt after hitting limit of 101 backtracks
+Solved problems//evil_09.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//evil_25.txt heuristic_level 1 mrv True with 0 backtracks in 0.00 sec:
+Failed problems//evil_27.txt after hitting limit of 101 backtracks
+Solved problems//easy_44.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Solved problems//easy_50.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Solved problems//easy_43.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Solved problems//easy_42.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Solved problems//easy_68.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Solved problems//easy_69.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Solved problems//easy_41.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Solved problems//easy_55.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Solved problems//easy_19.txt heuristic_level 1 mrv False with 1 backtracks in 0.01 sec:
+Solved problems//easy_30.txt heuristic_level 1 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//easy_18.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Solved problems//easy_20.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Solved problems//easy_07.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Solved problems//easy_06.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Solved problems//easy_05.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Solved problems//easy_01.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Solved problems//easy_29.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Solved problems//easy_17.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Solved problems//easy_70.txt heuristic_level 1 mrv False with 1 backtracks in 0.01 sec:
+Solved problems//easy_67.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Solved problems//easy_62.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Solved problems//easy_61.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Solved problems//easy_49.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Failed problems//medium_72.txt after hitting limit of 101 backtracks
+Solved problems//medium_73.txt heuristic_level 1 mrv False with 2 backtracks in 0.02 sec:
+Failed problems//medium_71.txt after hitting limit of 101 backtracks
+Failed problems//medium_64.txt after hitting limit of 101 backtracks
+Failed problems//medium_74.txt after hitting limit of 101 backtracks
+Solved problems//medium_63.txt heuristic_level 1 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//medium_10.txt heuristic_level 1 mrv False with 3 backtracks in 0.01 sec:
+Solved problems//medium_02.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Failed problems//medium_24.txt after hitting limit of 101 backtracks
+Failed problems//medium_31.txt after hitting limit of 101 backtracks
+Failed problems//medium_22.txt after hitting limit of 101 backtracks
+Solved problems//medium_36.txt heuristic_level 1 mrv False with 0 backtracks in 0.01 sec:
+Failed problems//medium_23.txt after hitting limit of 101 backtracks
+Solved problems//medium_35.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Failed problems//medium_21.txt after hitting limit of 101 backtracks
+Failed problems//medium_08.txt after hitting limit of 101 backtracks
+Solved problems//medium_46.txt heuristic_level 1 mrv False with 2 backtracks in 0.02 sec:
+Solved problems//medium_45.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Solved problems//medium_54.txt heuristic_level 1 mrv False with 3 backtracks in 0.02 sec:
+Solved problems//medium_56.txt heuristic_level 1 mrv False with 0 backtracks in 0.01 sec:
+Failed problems//medium_57.txt after hitting limit of 101 backtracks
+Failed problems//hard_66.txt after hitting limit of 101 backtracks
+Failed problems//hard_59.txt after hitting limit of 101 backtracks
+Failed problems//hard_65.txt after hitting limit of 101 backtracks
+Failed problems//hard_58.txt after hitting limit of 101 backtracks
+Failed problems//hard_75.txt after hitting limit of 101 backtracks
+Failed problems//hard_77.txt after hitting limit of 101 backtracks
+Failed problems//hard_76.txt after hitting limit of 101 backtracks
+Failed problems//hard_11.txt after hitting limit of 101 backtracks
+Failed problems//hard_38.txt after hitting limit of 101 backtracks
+Failed problems//hard_12.txt after hitting limit of 101 backtracks
+Failed problems//hard_13.txt after hitting limit of 101 backtracks
+Solved problems//hard_03.txt heuristic_level 1 mrv False with 1 backtracks in 0.01 sec:
+Solved problems//hard_33.txt heuristic_level 1 mrv False with 2 backtracks in 0.01 sec:
+Failed problems//hard_26.txt after hitting limit of 101 backtracks
+Failed problems//hard_32.txt after hitting limit of 101 backtracks
+Failed problems//hard_37.txt after hitting limit of 101 backtracks
+Solved problems//hard_47.txt heuristic_level 1 mrv False with 1 backtracks in 0.01 sec:
+Failed problems//hard_53.txt after hitting limit of 101 backtracks
+Solved problems//evil_16.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Failed problems//evil_15.txt after hitting limit of 101 backtracks
+Solved problems//evil_14.txt heuristic_level 1 mrv False with 1 backtracks in 0.01 sec:
+Failed problems//evil_28.txt after hitting limit of 101 backtracks
+Failed problems//evil_04.txt after hitting limit of 101 backtracks
+Failed problems//evil_39.txt after hitting limit of 101 backtracks
+Failed problems//evil_60.txt after hitting limit of 101 backtracks
+Failed problems//evil_48.txt after hitting limit of 101 backtracks
+Failed problems//evil_40.txt after hitting limit of 101 backtracks
+Failed problems//evil_52.txt after hitting limit of 101 backtracks
+Solved problems//evil_51.txt heuristic_level 1 mrv False with 0 backtracks in 0.01 sec:
+Failed problems//evil_34.txt after hitting limit of 101 backtracks
+Solved problems//evil_09.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Solved problems//evil_25.txt heuristic_level 1 mrv False with 0 backtracks in 0.00 sec:
+Failed problems//evil_27.txt after hitting limit of 101 backtracks
+Solved problems//easy_44.txt heuristic_level 2 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_50.txt heuristic_level 2 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_43.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//easy_42.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//easy_68.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//easy_69.txt heuristic_level 2 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_41.txt heuristic_level 2 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_55.txt heuristic_level 2 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_19.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//easy_30.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//easy_18.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//easy_20.txt heuristic_level 2 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_07.txt heuristic_level 2 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_06.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//easy_05.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//easy_01.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//easy_29.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//easy_17.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//easy_70.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//easy_67.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//easy_62.txt heuristic_level 2 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_61.txt heuristic_level 2 mrv True with 0 backtracks in 0.00 sec:
+Solved problems//easy_49.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//medium_72.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//medium_73.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//medium_71.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//medium_64.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//medium_74.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//medium_63.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//medium_10.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//medium_02.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//medium_24.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//medium_31.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//medium_22.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//medium_36.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//medium_23.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//medium_35.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//medium_21.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//medium_08.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//medium_46.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//medium_45.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//medium_54.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//medium_56.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//medium_57.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//hard_66.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//hard_59.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//hard_65.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//hard_58.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//hard_75.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//hard_77.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//hard_76.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//hard_11.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//hard_38.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//hard_12.txt heuristic_level 2 mrv True with 1 backtracks in 0.03 sec:
+Solved problems//hard_13.txt heuristic_level 2 mrv True with 1 backtracks in 0.02 sec:
+Solved problems//hard_03.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//hard_33.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//hard_26.txt heuristic_level 2 mrv True with 0 backtracks in 0.02 sec:
+Failed problems//hard_32.txt after hitting limit of 101 backtracks
+Solved problems//hard_37.txt heuristic_level 2 mrv True with 0 backtracks in 0.02 sec:
+Solved problems//hard_47.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//hard_53.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//evil_16.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//evil_15.txt heuristic_level 2 mrv True with 1 backtracks in 0.03 sec:
+Solved problems//evil_14.txt heuristic_level 2 mrv True with 0 backtracks in 0.02 sec:
+Failed problems//evil_28.txt after hitting limit of 101 backtracks
+Solved problems//evil_04.txt heuristic_level 2 mrv True with 3 backtracks in 0.06 sec:
+Solved problems//evil_39.txt heuristic_level 2 mrv True with 0 backtracks in 0.02 sec:
+Solved problems//evil_60.txt heuristic_level 2 mrv True with 0 backtracks in 0.02 sec:
+Solved problems//evil_48.txt heuristic_level 2 mrv True with 2 backtracks in 0.05 sec:
+Solved problems//evil_40.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//evil_52.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//evil_51.txt heuristic_level 2 mrv True with 1 backtracks in 0.03 sec:
+Solved problems//evil_34.txt heuristic_level 2 mrv True with 0 backtracks in 0.02 sec:
+Solved problems//evil_09.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//evil_25.txt heuristic_level 2 mrv True with 0 backtracks in 0.01 sec:
+Solved problems//evil_27.txt heuristic_level 2 mrv True with 2 backtracks in 0.05 sec:
+Solved problems//easy_44.txt heuristic_level 2 mrv False with 0 backtracks in 0.00 sec:
+Solved problems//easy_50.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//easy_43.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//easy_42.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//easy_68.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//easy_69.txt heuristic_level 2 mrv False with 0 backtracks in 0.00 sec:
+Solved problems//easy_41.txt heuristic_level 2 mrv False with 0 backtracks in 0.00 sec:
+Solved problems//easy_55.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//easy_19.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//easy_30.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//easy_18.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//easy_20.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//easy_07.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//easy_06.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//easy_05.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//easy_01.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//easy_29.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//easy_17.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//easy_70.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//easy_67.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//easy_62.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//easy_61.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//easy_49.txt heuristic_level 2 mrv False with 0 backtracks in 0.00 sec:
+Solved problems//medium_72.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//medium_73.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//medium_71.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//medium_64.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//medium_74.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//medium_63.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//medium_10.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//medium_02.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//medium_24.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//medium_31.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//medium_22.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//medium_36.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//medium_23.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//medium_35.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//medium_21.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//medium_08.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//medium_46.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//medium_45.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//medium_54.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//medium_56.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//medium_57.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//hard_66.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//hard_59.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//hard_65.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//hard_58.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//hard_75.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//hard_77.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//hard_76.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//hard_11.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//hard_38.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//hard_12.txt heuristic_level 2 mrv False with 1 backtracks in 0.03 sec:
+Solved problems//hard_13.txt heuristic_level 2 mrv False with 1 backtracks in 0.03 sec:
+Solved problems//hard_03.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//hard_33.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//hard_26.txt heuristic_level 2 mrv False with 1 backtracks in 0.03 sec:
+Solved problems//hard_32.txt heuristic_level 2 mrv False with 1 backtracks in 0.03 sec:
+Solved problems//hard_37.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//hard_47.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//hard_53.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//evil_16.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Failed problems//evil_15.txt after hitting limit of 101 backtracks
+Solved problems//evil_14.txt heuristic_level 2 mrv False with 1 backtracks in 0.03 sec:
+Solved problems//evil_28.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//evil_04.txt heuristic_level 2 mrv False with 3 backtracks in 0.06 sec:
+Solved problems//evil_39.txt heuristic_level 2 mrv False with 0 backtracks in 0.05 sec:
+Solved problems//evil_60.txt heuristic_level 2 mrv False with 1 backtracks in 0.03 sec:
+Solved problems//evil_48.txt heuristic_level 2 mrv False with 1 backtracks in 0.03 sec:
+Solved problems//evil_40.txt heuristic_level 2 mrv False with 3 backtracks in 0.04 sec:
+Solved problems//evil_52.txt heuristic_level 2 mrv False with 0 backtracks in 0.02 sec:
+Solved problems//evil_51.txt heuristic_level 2 mrv False with 0 backtracks in 0.02 sec:
+Solved problems//evil_34.txt heuristic_level 2 mrv False with 2 backtracks in 0.04 sec:
+Solved problems//evil_09.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Solved problems//evil_25.txt heuristic_level 2 mrv False with 0 backtracks in 0.01 sec:
+Failed problems//evil_27.txt after hitting limit of 101 backtracks
+Solved problems//easy_44.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//easy_50.txt heuristic_level 3 mrv True with 0 backtracks in 0.02 sec:
+Solved problems//easy_43.txt heuristic_level 3 mrv True with 0 backtracks in 0.02 sec:
+Solved problems//easy_42.txt heuristic_level 3 mrv True with 0 backtracks in 0.02 sec:
+Solved problems//easy_68.txt heuristic_level 3 mrv True with 0 backtracks in 0.02 sec:
+Solved problems//easy_69.txt heuristic_level 3 mrv True with 0 backtracks in 0.02 sec:
+Solved problems//easy_41.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//easy_55.txt heuristic_level 3 mrv True with 0 backtracks in 0.02 sec:
+Solved problems//easy_19.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//easy_30.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//easy_18.txt heuristic_level 3 mrv True with 0 backtracks in 0.02 sec:
+Solved problems//easy_20.txt heuristic_level 3 mrv True with 0 backtracks in 0.02 sec:
+Solved problems//easy_07.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//easy_06.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//easy_05.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//easy_01.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//easy_29.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//easy_17.txt heuristic_level 3 mrv True with 0 backtracks in 0.02 sec:
+Solved problems//easy_70.txt heuristic_level 3 mrv True with 0 backtracks in 0.02 sec:
+Solved problems//easy_67.txt heuristic_level 3 mrv True with 0 backtracks in 0.02 sec:
+Solved problems//easy_62.txt heuristic_level 3 mrv True with 0 backtracks in 0.02 sec:
+Solved problems//easy_61.txt heuristic_level 3 mrv True with 0 backtracks in 0.02 sec:
+Solved problems//easy_49.txt heuristic_level 3 mrv True with 0 backtracks in 0.02 sec:
+Solved problems//medium_72.txt heuristic_level 3 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//medium_73.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//medium_71.txt heuristic_level 3 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//medium_64.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//medium_74.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//medium_63.txt heuristic_level 3 mrv True with 0 backtracks in 0.02 sec:
+Solved problems//medium_10.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//medium_02.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//medium_24.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//medium_31.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//medium_22.txt heuristic_level 3 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//medium_36.txt heuristic_level 3 mrv True with 0 backtracks in 0.02 sec:
+Solved problems//medium_23.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//medium_35.txt heuristic_level 3 mrv True with 0 backtracks in 0.02 sec:
+Solved problems//medium_21.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//medium_08.txt heuristic_level 3 mrv True with 0 backtracks in 0.02 sec:
+Solved problems//medium_46.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//medium_45.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//medium_54.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//medium_56.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//medium_57.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//hard_66.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//hard_59.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//hard_65.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//hard_58.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//hard_75.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//hard_77.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//hard_76.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//hard_11.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//hard_38.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//hard_12.txt heuristic_level 3 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//hard_13.txt heuristic_level 3 mrv True with 1 backtracks in 0.08 sec:
+Solved problems//hard_03.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//hard_33.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//hard_26.txt heuristic_level 3 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//hard_32.txt heuristic_level 3 mrv True with 1 backtracks in 0.11 sec:
+Solved problems//hard_37.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//hard_47.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//hard_53.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//evil_16.txt heuristic_level 3 mrv True with 0 backtracks in 0.02 sec:
+Solved problems//evil_15.txt heuristic_level 3 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//evil_14.txt heuristic_level 3 mrv True with 0 backtracks in 0.08 sec:
+Failed problems//evil_28.txt after hitting limit of 101 backtracks
+Solved problems//evil_04.txt heuristic_level 3 mrv True with 1 backtracks in 0.13 sec:
+Solved problems//evil_39.txt heuristic_level 3 mrv True with 0 backtracks in 0.08 sec:
+Solved problems//evil_60.txt heuristic_level 3 mrv True with 0 backtracks in 0.07 sec:
+Solved problems//evil_48.txt heuristic_level 3 mrv True with 0 backtracks in 0.09 sec:
+Solved problems//evil_40.txt heuristic_level 3 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//evil_52.txt heuristic_level 3 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//evil_51.txt heuristic_level 3 mrv True with 1 backtracks in 0.09 sec:
+Solved problems//evil_34.txt heuristic_level 3 mrv True with 1 backtracks in 0.10 sec:
+Solved problems//evil_09.txt heuristic_level 3 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//evil_25.txt heuristic_level 3 mrv True with 0 backtracks in 0.02 sec:
+Solved problems//evil_27.txt heuristic_level 3 mrv True with 0 backtracks in 0.08 sec:
+Solved problems//easy_44.txt heuristic_level 3 mrv False with 0 backtracks in 0.02 sec:
+Solved problems//easy_50.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_43.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_42.txt heuristic_level 3 mrv False with 0 backtracks in 0.02 sec:
+Solved problems//easy_68.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_69.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_41.txt heuristic_level 3 mrv False with 0 backtracks in 0.02 sec:
+Solved problems//easy_55.txt heuristic_level 3 mrv False with 0 backtracks in 0.02 sec:
+Solved problems//easy_19.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_30.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_18.txt heuristic_level 3 mrv False with 0 backtracks in 0.02 sec:
+Solved problems//easy_20.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_07.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_06.txt heuristic_level 3 mrv False with 0 backtracks in 0.02 sec:
+Solved problems//easy_05.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_01.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_29.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_17.txt heuristic_level 3 mrv False with 0 backtracks in 0.02 sec:
+Solved problems//easy_70.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_67.txt heuristic_level 3 mrv False with 0 backtracks in 0.02 sec:
+Solved problems//easy_62.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_61.txt heuristic_level 3 mrv False with 0 backtracks in 0.02 sec:
+Solved problems//easy_49.txt heuristic_level 3 mrv False with 0 backtracks in 0.02 sec:
+Solved problems//medium_72.txt heuristic_level 3 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//medium_73.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//medium_71.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//medium_64.txt heuristic_level 3 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//medium_74.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//medium_63.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//medium_10.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//medium_02.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//medium_24.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//medium_31.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//medium_22.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//medium_36.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//medium_23.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//medium_35.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//medium_21.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//medium_08.txt heuristic_level 3 mrv False with 0 backtracks in 0.02 sec:
+Solved problems//medium_46.txt heuristic_level 3 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//medium_45.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//medium_54.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//medium_56.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//medium_57.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//hard_66.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//hard_59.txt heuristic_level 3 mrv False with 0 backtracks in 0.02 sec:
+Solved problems//hard_65.txt heuristic_level 3 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//hard_58.txt heuristic_level 3 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//hard_75.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//hard_77.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//hard_76.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//hard_11.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//hard_38.txt heuristic_level 3 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//hard_12.txt heuristic_level 3 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//hard_13.txt heuristic_level 3 mrv False with 1 backtracks in 0.09 sec:
+Solved problems//hard_03.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//hard_33.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//hard_26.txt heuristic_level 3 mrv False with 1 backtracks in 0.10 sec:
+Solved problems//hard_32.txt heuristic_level 3 mrv False with 0 backtracks in 0.08 sec:
+Solved problems//hard_37.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//hard_47.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//hard_53.txt heuristic_level 3 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//evil_16.txt heuristic_level 3 mrv False with 0 backtracks in 0.02 sec:
+Solved problems//evil_15.txt heuristic_level 3 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//evil_14.txt heuristic_level 3 mrv False with 0 backtracks in 0.09 sec:
+Solved problems//evil_28.txt heuristic_level 3 mrv False with 0 backtracks in 0.09 sec:
+Solved problems//evil_04.txt heuristic_level 3 mrv False with 3 backtracks in 0.19 sec:
+Solved problems//evil_39.txt heuristic_level 3 mrv False with 0 backtracks in 0.07 sec:
+Solved problems//evil_60.txt heuristic_level 3 mrv False with 1 backtracks in 0.11 sec:
+Solved problems//evil_48.txt heuristic_level 3 mrv False with 1 backtracks in 0.13 sec:
+Solved problems//evil_40.txt heuristic_level 3 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//evil_52.txt heuristic_level 3 mrv False with 0 backtracks in 0.05 sec:
+Solved problems//evil_51.txt heuristic_level 3 mrv False with 0 backtracks in 0.08 sec:
+Solved problems//evil_34.txt heuristic_level 3 mrv False with 1 backtracks in 0.12 sec:
+Solved problems//evil_09.txt heuristic_level 3 mrv False with 0 backtracks in 0.02 sec:
+Solved problems//evil_25.txt heuristic_level 3 mrv False with 0 backtracks in 0.02 sec:
+Solved problems//evil_27.txt heuristic_level 3 mrv False with 0 backtracks in 0.09 sec:
+Solved problems//easy_44.txt heuristic_level 4 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//easy_50.txt heuristic_level 4 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//easy_43.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//easy_42.txt heuristic_level 4 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//easy_68.txt heuristic_level 4 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//easy_69.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//easy_41.txt heuristic_level 4 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//easy_55.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//easy_19.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//easy_30.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//easy_18.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//easy_20.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//easy_07.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//easy_06.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//easy_05.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//easy_01.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//easy_29.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//easy_17.txt heuristic_level 4 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//easy_70.txt heuristic_level 4 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//easy_67.txt heuristic_level 4 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//easy_62.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//easy_61.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//easy_49.txt heuristic_level 4 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//medium_72.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//medium_73.txt heuristic_level 4 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//medium_71.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//medium_64.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//medium_74.txt heuristic_level 4 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//medium_63.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//medium_10.txt heuristic_level 4 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//medium_02.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//medium_24.txt heuristic_level 4 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//medium_31.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//medium_22.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//medium_36.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//medium_23.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//medium_35.txt heuristic_level 4 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//medium_21.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//medium_08.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//medium_46.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//medium_45.txt heuristic_level 4 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//medium_54.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//medium_56.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//medium_57.txt heuristic_level 4 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//hard_66.txt heuristic_level 4 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//hard_59.txt heuristic_level 4 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//hard_65.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//hard_58.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//hard_75.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//hard_77.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//hard_76.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//hard_11.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//hard_38.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//hard_12.txt heuristic_level 4 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//hard_13.txt heuristic_level 4 mrv True with 1 backtracks in 0.15 sec:
+Solved problems//hard_03.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//hard_33.txt heuristic_level 4 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//hard_26.txt heuristic_level 4 mrv True with 0 backtracks in 0.15 sec:
+Solved problems//hard_32.txt heuristic_level 4 mrv True with 1 backtracks in 0.19 sec:
+Solved problems//hard_37.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//hard_47.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//hard_53.txt heuristic_level 4 mrv True with 0 backtracks in 0.04 sec:
+Solved problems//evil_16.txt heuristic_level 4 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//evil_15.txt heuristic_level 4 mrv True with 0 backtracks in 0.08 sec:
+Solved problems//evil_14.txt heuristic_level 4 mrv True with 0 backtracks in 0.15 sec:
+Solved problems//evil_28.txt heuristic_level 4 mrv True with 1 backtracks in 0.22 sec:
+Solved problems//evil_04.txt heuristic_level 4 mrv True with 1 backtracks in 0.23 sec:
+Solved problems//evil_39.txt heuristic_level 4 mrv True with 0 backtracks in 0.10 sec:
+Solved problems//evil_60.txt heuristic_level 4 mrv True with 0 backtracks in 0.15 sec:
+Solved problems//evil_48.txt heuristic_level 4 mrv True with 0 backtracks in 0.09 sec:
+Solved problems//evil_40.txt heuristic_level 4 mrv True with 0 backtracks in 0.08 sec:
+Solved problems//evil_52.txt heuristic_level 4 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//evil_51.txt heuristic_level 4 mrv True with 0 backtracks in 0.11 sec:
+Solved problems//evil_34.txt heuristic_level 4 mrv True with 0 backtracks in 0.10 sec:
+Solved problems//evil_09.txt heuristic_level 4 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//evil_25.txt heuristic_level 4 mrv True with 0 backtracks in 0.03 sec:
+Solved problems//evil_27.txt heuristic_level 4 mrv True with 0 backtracks in 0.11 sec:
+Solved problems//easy_44.txt heuristic_level 4 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_50.txt heuristic_level 4 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_43.txt heuristic_level 4 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_42.txt heuristic_level 4 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_68.txt heuristic_level 4 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_69.txt heuristic_level 4 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_41.txt heuristic_level 4 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_55.txt heuristic_level 4 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_19.txt heuristic_level 4 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_30.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//easy_18.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//easy_20.txt heuristic_level 4 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_07.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//easy_06.txt heuristic_level 4 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_05.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//easy_01.txt heuristic_level 4 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_29.txt heuristic_level 4 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_17.txt heuristic_level 4 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_70.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//easy_67.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//easy_62.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//easy_61.txt heuristic_level 4 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//easy_49.txt heuristic_level 4 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//medium_72.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//medium_73.txt heuristic_level 4 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//medium_71.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//medium_64.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//medium_74.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//medium_63.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//medium_10.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//medium_02.txt heuristic_level 4 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//medium_24.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//medium_31.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//medium_22.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//medium_36.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//medium_23.txt heuristic_level 4 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//medium_35.txt heuristic_level 4 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//medium_21.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//medium_08.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//medium_46.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//medium_45.txt heuristic_level 4 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//medium_54.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//medium_56.txt heuristic_level 4 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//medium_57.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//hard_66.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//hard_59.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//hard_65.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//hard_58.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//hard_75.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//hard_77.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//hard_76.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//hard_11.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//hard_38.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//hard_12.txt heuristic_level 4 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//hard_13.txt heuristic_level 4 mrv False with 1 backtracks in 0.15 sec:
+Solved problems//hard_03.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//hard_33.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//hard_26.txt heuristic_level 4 mrv False with 1 backtracks in 0.19 sec:
+Solved problems//hard_32.txt heuristic_level 4 mrv False with 0 backtracks in 0.10 sec:
+Solved problems//hard_37.txt heuristic_level 4 mrv False with 0 backtracks in 0.05 sec:
+Solved problems//hard_47.txt heuristic_level 4 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//hard_53.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//evil_16.txt heuristic_level 4 mrv False with 0 backtracks in 0.04 sec:
+Solved problems//evil_15.txt heuristic_level 4 mrv False with 0 backtracks in 0.07 sec:
+Solved problems//evil_14.txt heuristic_level 4 mrv False with 0 backtracks in 0.16 sec:
+Solved problems//evil_28.txt heuristic_level 4 mrv False with 0 backtracks in 0.14 sec:
+Solved problems//evil_04.txt heuristic_level 4 mrv False with 3 backtracks in 0.25 sec:
+Solved problems//evil_39.txt heuristic_level 4 mrv False with 0 backtracks in 0.09 sec:
+Solved problems//evil_60.txt heuristic_level 4 mrv False with 1 backtracks in 0.20 sec:
+Solved problems//evil_48.txt heuristic_level 4 mrv False with 0 backtracks in 0.10 sec:
+Solved problems//evil_40.txt heuristic_level 4 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//evil_52.txt heuristic_level 4 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//evil_51.txt heuristic_level 4 mrv False with 0 backtracks in 0.11 sec:
+Solved problems//evil_34.txt heuristic_level 4 mrv False with 0 backtracks in 0.11 sec:
+Solved problems//evil_09.txt heuristic_level 4 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//evil_25.txt heuristic_level 4 mrv False with 0 backtracks in 0.03 sec:
+Solved problems//evil_27.txt heuristic_level 4 mrv False with 0 backtracks in 0.10 sec:
+Solved problems//easy_44.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//easy_50.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//easy_43.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//easy_42.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//easy_68.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//easy_69.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//easy_41.txt heuristic_level 5 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//easy_55.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//easy_19.txt heuristic_level 5 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//easy_30.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//easy_18.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//easy_20.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//easy_07.txt heuristic_level 5 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//easy_06.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//easy_05.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//easy_01.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//easy_29.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//easy_17.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//easy_70.txt heuristic_level 5 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//easy_67.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//easy_62.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//easy_61.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//easy_49.txt heuristic_level 5 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//medium_72.txt heuristic_level 5 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//medium_73.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//medium_71.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//medium_64.txt heuristic_level 5 mrv True with 0 backtracks in 0.07 sec:
+Solved problems//medium_74.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//medium_63.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//medium_10.txt heuristic_level 5 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//medium_02.txt heuristic_level 5 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//medium_24.txt heuristic_level 5 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//medium_31.txt heuristic_level 5 mrv True with 0 backtracks in 0.07 sec:
+Solved problems//medium_22.txt heuristic_level 5 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//medium_36.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//medium_23.txt heuristic_level 5 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//medium_35.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//medium_21.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//medium_08.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//medium_46.txt heuristic_level 5 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//medium_45.txt heuristic_level 5 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//medium_54.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//medium_56.txt heuristic_level 5 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//medium_57.txt heuristic_level 5 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//hard_66.txt heuristic_level 5 mrv True with 0 backtracks in 0.07 sec:
+Solved problems//hard_59.txt heuristic_level 5 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//hard_65.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//hard_58.txt heuristic_level 5 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//hard_75.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//hard_77.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//hard_76.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//hard_11.txt heuristic_level 5 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//hard_38.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//hard_12.txt heuristic_level 5 mrv True with 0 backtracks in 0.08 sec:
+Solved problems//hard_13.txt heuristic_level 5 mrv True with 1 backtracks in 0.22 sec:
+Solved problems//hard_03.txt heuristic_level 5 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//hard_33.txt heuristic_level 5 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//hard_26.txt heuristic_level 5 mrv True with 0 backtracks in 0.22 sec:
+Solved problems//hard_32.txt heuristic_level 5 mrv True with 1 backtracks in 0.23 sec:
+Solved problems//hard_37.txt heuristic_level 5 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//hard_47.txt heuristic_level 5 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//hard_53.txt heuristic_level 5 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//evil_16.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//evil_15.txt heuristic_level 5 mrv True with 0 backtracks in 0.08 sec:
+Solved problems//evil_14.txt heuristic_level 5 mrv True with 0 backtracks in 0.17 sec:
+Solved problems//evil_28.txt heuristic_level 5 mrv True with 1 backtracks in 0.34 sec:
+Solved problems//evil_04.txt heuristic_level 5 mrv True with 1 backtracks in 0.30 sec:
+Solved problems//evil_39.txt heuristic_level 5 mrv True with 0 backtracks in 0.11 sec:
+Solved problems//evil_60.txt heuristic_level 5 mrv True with 0 backtracks in 0.19 sec:
+Solved problems//evil_48.txt heuristic_level 5 mrv True with 0 backtracks in 0.11 sec:
+Solved problems//evil_40.txt heuristic_level 5 mrv True with 0 backtracks in 0.08 sec:
+Solved problems//evil_52.txt heuristic_level 5 mrv True with 0 backtracks in 0.08 sec:
+Solved problems//evil_51.txt heuristic_level 5 mrv True with 0 backtracks in 0.14 sec:
+Solved problems//evil_34.txt heuristic_level 5 mrv True with 0 backtracks in 0.13 sec:
+Solved problems//evil_09.txt heuristic_level 5 mrv True with 0 backtracks in 0.05 sec:
+Solved problems//evil_25.txt heuristic_level 5 mrv True with 0 backtracks in 0.06 sec:
+Solved problems//evil_27.txt heuristic_level 5 mrv True with 0 backtracks in 0.11 sec:
+Solved problems//easy_44.txt heuristic_level 5 mrv False with 0 backtracks in 0.05 sec:
+Solved problems//easy_50.txt heuristic_level 5 mrv False with 0 backtracks in 0.05 sec:
+Solved problems//easy_43.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//easy_42.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//easy_68.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//easy_69.txt heuristic_level 5 mrv False with 0 backtracks in 0.05 sec:
+Solved problems//easy_41.txt heuristic_level 5 mrv False with 0 backtracks in 0.05 sec:
+Solved problems//easy_55.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//easy_19.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//easy_30.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//easy_18.txt heuristic_level 5 mrv False with 0 backtracks in 0.05 sec:
+Solved problems//easy_20.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//easy_07.txt heuristic_level 5 mrv False with 0 backtracks in 0.07 sec:
+Solved problems//easy_06.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//easy_05.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//easy_01.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//easy_29.txt heuristic_level 5 mrv False with 0 backtracks in 0.05 sec:
+Solved problems//easy_17.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//easy_70.txt heuristic_level 5 mrv False with 0 backtracks in 0.05 sec:
+Solved problems//easy_67.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//easy_62.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//easy_61.txt heuristic_level 5 mrv False with 0 backtracks in 0.05 sec:
+Solved problems//easy_49.txt heuristic_level 5 mrv False with 0 backtracks in 0.05 sec:
+Solved problems//medium_72.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//medium_73.txt heuristic_level 5 mrv False with 0 backtracks in 0.05 sec:
+Solved problems//medium_71.txt heuristic_level 5 mrv False with 0 backtracks in 0.07 sec:
+Solved problems//medium_64.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//medium_74.txt heuristic_level 5 mrv False with 0 backtracks in 0.05 sec:
+Solved problems//medium_63.txt heuristic_level 5 mrv False with 0 backtracks in 0.05 sec:
+Solved problems//medium_10.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//medium_02.txt heuristic_level 5 mrv False with 0 backtracks in 0.05 sec:
+Solved problems//medium_24.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//medium_31.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//medium_22.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//medium_36.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//medium_23.txt heuristic_level 5 mrv False with 0 backtracks in 0.05 sec:
+Solved problems//medium_35.txt heuristic_level 5 mrv False with 0 backtracks in 0.05 sec:
+Solved problems//medium_21.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//medium_08.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//medium_46.txt heuristic_level 5 mrv False with 0 backtracks in 0.05 sec:
+Solved problems//medium_45.txt heuristic_level 5 mrv False with 0 backtracks in 0.05 sec:
+Solved problems//medium_54.txt heuristic_level 5 mrv False with 0 backtracks in 0.05 sec:
+Solved problems//medium_56.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//medium_57.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//hard_66.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//hard_59.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//hard_65.txt heuristic_level 5 mrv False with 0 backtracks in 0.05 sec:
+Solved problems//hard_58.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//hard_75.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//hard_77.txt heuristic_level 5 mrv False with 0 backtracks in 0.07 sec:
+Solved problems//hard_76.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//hard_11.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//hard_38.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//hard_12.txt heuristic_level 5 mrv False with 0 backtracks in 0.08 sec:
+Solved problems//hard_13.txt heuristic_level 5 mrv False with 1 backtracks in 0.24 sec:
+Solved problems//hard_03.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//hard_33.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//hard_26.txt heuristic_level 5 mrv False with 1 backtracks in 0.25 sec:
+Solved problems//hard_32.txt heuristic_level 5 mrv False with 0 backtracks in 0.14 sec:
+Solved problems//hard_37.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//hard_47.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//hard_53.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//evil_16.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//evil_15.txt heuristic_level 5 mrv False with 0 backtracks in 0.08 sec:
+Solved problems//evil_14.txt heuristic_level 5 mrv False with 0 backtracks in 0.20 sec:
+Solved problems//evil_28.txt heuristic_level 5 mrv False with 0 backtracks in 0.23 sec:
+Solved problems//evil_04.txt heuristic_level 5 mrv False with 3 backtracks in 0.44 sec:
+Solved problems//evil_39.txt heuristic_level 5 mrv False with 0 backtracks in 0.11 sec:
+Solved problems//evil_60.txt heuristic_level 5 mrv False with 1 backtracks in 0.23 sec:
+Solved problems//evil_48.txt heuristic_level 5 mrv False with 0 backtracks in 0.12 sec:
+Solved problems//evil_40.txt heuristic_level 5 mrv False with 0 backtracks in 0.10 sec:
+Solved problems//evil_52.txt heuristic_level 5 mrv False with 0 backtracks in 0.08 sec:
+Solved problems//evil_51.txt heuristic_level 5 mrv False with 0 backtracks in 0.14 sec:
+Solved problems//evil_34.txt heuristic_level 5 mrv False with 0 backtracks in 0.12 sec:
+Solved problems//evil_09.txt heuristic_level 5 mrv False with 0 backtracks in 0.06 sec:
+Solved problems//evil_25.txt heuristic_level 5 mrv False with 0 backtracks in 0.05 sec:
+Solved problems//evil_27.txt heuristic_level 5 mrv False with 0 backtracks in 0.11 sec:
