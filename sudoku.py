@@ -15,30 +15,26 @@ class Sudoku:
         return str(values * is_known)
 
     def is_solved(self):
-        # The state is solved when only a single value remains for each square
+        # The state is solved when only a single value remains for each cell
         return np.all(self.state.sum(axis=2) == 1)
 
     def is_impossible(self):
-        # If for any square no value is possible, the puzzle cannot be solved
+        # If for any cell no value is possible, the puzzle cannot be solved
         return np.any(self.state.sum(axis=2) == 0)
 
-    def inference(self):
-        # If any heuristic changes something, go back and re-run all the heuristics
-        while True:
-            if self.heuristic_naked_singles():
-                continue
-            if self.heuristic_hidden_singles():
-                continue
-            if self.heuristic_naked_pairs():
-                continue
-            if self.heuristic_hidden_pairs():
-                continue
-            if self.heuristic_naked_triples():
-                continue
-            if self.heuristic_hidden_triples():
-                continue
-            # Every heuristic is finished running: inference is done now
-            break
+    def inference(self, heuristic_level=5):
+        heuristics = [
+            self.heuristic_naked_singles,
+            self.heuristic_hidden_singles,
+            self.heuristic_naked_pairs,
+            self.heuristic_hidden_pairs,
+            self.heuristic_naked_triples,
+            self.heuristic_hidden_triples,
+        ][:heuristic_level]
+        while any(h() for h in heuristics):
+            # If any heuristic changes something, go back and re-run all the heuristics
+            pass
+        # Inference is done when every heuristic returns False
 
     def heuristic_naked_singles(self):
         is_known = self.state.sum(axis=2) == 1
@@ -102,205 +98,31 @@ class Sudoku:
 
     def heuristic_naked_triples(self):
         old_state = self.state.copy()
-        for triple in range(9):
-            for partner in range(9):
-                for idx in range(9):
-                    if triple == partner: continue
-                    if idx == partner: continue
-                    if idx == triple : continue
-
-                    for row in range(9):
-                       
-                        cur_space     = self.state[row,idx]
-                        partner_space = self.state[row,partner]
-                        triple_space  = self.state[row,triple]
-
-                        if cur_space.sum() == 2 and partner_space.sum() == 2 and triple_space.sum() == 2:
-                            cur_space_indices     = [i for i, x in enumerate(cur_space) if x == True]
-                            partner_space_indices = [i for i, x in enumerate(partner_space) if x == True]
-                            triple_space_indices  = [i for i, x in enumerate(triple_space) if x == True]
-
-                            cp_intersect = np.intersect1d(cur_space_indices,partner_space_indices)
-                            pt_intersect = np.intersect1d(partner_space_indices,triple_space_indices)
-                            tc_intersect = np.intersect1d(triple_space_indices,cur_space_indices)
-
-                            union = reduce(np.union1d, (cp_intersect, pt_intersect, tc_intersect))
-
-                            if len(union) == 3:
-                                # remove the union numbers from the rest
-                                for rest in range(9):
-                                    if rest == idx or rest ==partner or rest == triple: continue
-                                    self.state[row,rest][union[0]] = False
-                                    self.state[row,rest][union[1]] = False
-                                    self.state[row,rest][union[2]] = False
-
-                    for col in range(9):
-                        cur_space     = self.state[idx,col]
-                        partner_space = self.state[partner, col]
-                        triple_space  = self.state[triple,  col]
-
-                        if cur_space.sum() == 2 and partner_space.sum() == 2 and triple_space.sum() == 2:
-                            cur_space_indices     = [i for i, x in enumerate(cur_space) if x == True]
-                            partner_space_indices = [i for i, x in enumerate(partner_space) if x == True]
-                            triple_space_indices  = [i for i, x in enumerate(triple_space) if x == True]
-
-                            cp_intersect = np.intersect1d(cur_space_indices,partner_space_indices)
-                            pt_intersect = np.intersect1d(partner_space_indices,triple_space_indices)
-                            tc_intersect = np.intersect1d(triple_space_indices,cur_space_indices)
-
-                            union = reduce(np.union1d, (cp_intersect, pt_intersect, tc_intersect))
-
-                            if len(union) == 3:
-                                # remove the union numbers from the rest
-                                for rest in range(9):
-                                    if rest == idx or rest ==partner or rest == triple: continue
-                                    self.state[rest ,col][union[0]] = False
-                                    self.state[rest ,col][union[1]] = False
-                                    self.state[rest ,col][union[2]] = False
-
-            
-                    for ix, iy in np.ndindex(3, 3):
-                        cur_box = self.state[iy*3:3+iy*3, ix*3:3+ix*3].reshape((9,9))
-                       
-                        cur_space     = cur_box[idx]
-                        partner_space = cur_box[partner]
-                        triple_space  = cur_box[triple]
-
-                        if cur_space.sum() == 2 and partner_space.sum() == 2 and triple_space.sum() == 2:
-                            cur_space_indices     = [i for i, x in enumerate(cur_space) if x == True]
-                            partner_space_indices = [i for i, x in enumerate(partner_space) if x == True]
-                            triple_space_indices  = [i for i, x in enumerate(triple_space) if x == True]
-
-                            cp_intersect = np.intersect1d(cur_space_indices,partner_space_indices)
-                            pt_intersect = np.intersect1d(partner_space_indices,triple_space_indices)
-                            tc_intersect = np.intersect1d(triple_space_indices,cur_space_indices)
-
-                            union = reduce(np.union1d, (cp_intersect, pt_intersect, tc_intersect))
-
-                            if len(union) == 3:
-                                # remove the union numbers from the rest
-                                for rest in range(9):
-                                    if rest == idx or rest ==partner or rest == triple: continue
-                                    cur_box[rest][union[0]] = False
-                                    cur_box[rest][union[1]] = False
-                                    cur_box[rest][union[2]] = False
-                        self.state[iy*3:3+iy*3, ix*3:3+ix*3] = cur_box.reshape((3,3,9))
+        for cell_triple in triples():
+            for row in range(9):
+                naked_triple(self.state[row, :], cell_triple)
+            for col in range(9):
+                naked_triple(self.state[:, col], cell_triple)
+            for bx, by in np.ndindex(3, 3):
+                box = self.state[by*3:by*3 + 3, bx*3:bx*3 + 3].reshape((9,9))
+                result = naked_triple(box, cell_triple)
+                self.state[by*3:by*3 + 3, bx*3:bx*3 + 3] = result.reshape((3,3,9))
         return np.any(self.state != old_state)
 
-    #TODO: refactor this into "hidden n"
     def heuristic_hidden_triples(self):
         old_state = self.state.copy()
-        for idx in range(9):
+        for cell_triple in triples():
             for row in range(9):
-                #get current box 
-                cur_space = self.state[row,idx]
-                cur_space_indices = [i for i, x in enumerate(cur_space) if x == True] 
-                #search all other spaces
-                for partner in range(9):
-                    if partner == idx: continue
-                    partner_space = self.state[row,partner]
-                    partner_space_indices = [i for i, x in enumerate(partner_space) if x == True] 
-
-                    #find the common numbers between two arbitrary spaces
-                    intersect = np.intersect1d(cur_space_indices,partner_space_indices)
-                    if len(intersect) == 3:
-                        
-                        break_partner = False
-                        for other in range(9):
-                            if other == idx: continue
-                            if other == partner: continue
-                        
-                            other_space = self.state[row,other]
-                            other_space_indices = [i for i, x in enumerate(other_space) if x == True] 
-                            #see if the common pair is unique
-                            other_intersect = np.intersect1d(intersect,other_space_indices)
-                            if (len(other_intersect) > 0):
-                                #if it is, quit your partner
-                                break_partner = True
-                                break
-
-                        #we java now
-                        if break_partner: break
-
-                        #actually apply the inference
-                        self.state[row,idx] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
-                        self.state[row,partner] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
+                hidden_triple(self.state[row, :], cell_triple)
             for col in range(9):
-                #get current box 
-                cur_space = self.state[idx, col]
-                cur_space_indices = [i for i, x in enumerate(cur_space) if x == True] 
-                #search all other spaces
-                for partner in range(9):
-                    if partner == idx: continue
-                    partner_space = self.state[partner, col]
-                    partner_space_indices = [i for i, x in enumerate(partner_space) if x == True] 
-
-                    #find the common numbers between two arbitrary spaces
-                    intersect = np.intersect1d(cur_space_indices,partner_space_indices)
-                    if len(intersect) == 3:
-                        
-                        break_partner = False
-                        for other in range(9):
-                            if other == idx: continue
-                            if other == partner: continue
-                        
-                            other_space = self.state[idx,col] 
-                            other_space_indices = [i for i, x in enumerate(other_space) if x == True] 
-                            #see if the common pair is unique
-                            other_intersect = np.intersect1d(intersect,other_space_indices)
-                            if (len(other_intersect) > 0):
-                                #if it is, quit your partner
-                                break_partner = True
-                                break
-
-                        #we java now
-                        if break_partner: break
-
-                        #actually apply the inference
-                        self.state[idx, col ] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
-                        self.state[partner, col] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
-
-        for ix, iy in np.ndindex(3, 3):
-            cur_box = self.state[iy*3:3+iy*3, ix*3:3+ix*3].reshape((9,9))
-            for idx in range(9):
-                #get current box 
-                cur_space = cur_box[idx]
-                cur_space_indices = [i for i, x in enumerate(cur_space) if x == True] 
-                #search all other spaces
-                for partner in range(9):
-                    if partner == idx: continue
-                    partner_space = cur_box[partner]
-                    partner_space_indices = [i for i, x in enumerate(partner_space) if x == True] 
-
-                    #find the common numbers between two arbitrary spaces
-                    intersect = np.intersect1d(cur_space_indices,partner_space_indices)
-                    if len(intersect) == 3:
-                        
-                        break_partner = False
-                        for other in range(9):
-                            if other == idx: continue
-                            if other == partner: continue
-                        
-                            other_space = cur_box[other]
-                            other_space_indices = [i for i, x in enumerate(other_space) if x == True] 
-                            #see if the common pair is unique
-                            other_intersect = np.intersect1d(intersect,other_space_indices)
-                            if (len(other_intersect) > 0):
-                                #if it is, quit your partner
-                                break_partner = True
-                                break
-
-                        #we java now
-                        if break_partner: break
-
-                        #actually apply the inference
-                        cur_box[idx] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
-                        cur_box[partner] = [True if np.isin(i,list(intersect)) else False for i in range(9) ]
-            self.state[iy*3:3+iy*3, ix*3:3+ix*3] = cur_box.reshape((3,3,9))
-
+                hidden_triple(self.state[:, col], cell_triple)
+            for bx, by in np.ndindex(3, 3):
+                box = self.state[by*3:by*3 + 3, bx*3:bx*3 + 3].reshape((9,9))
+                result = hidden_triple(box, cell_triple)
+                self.state[by*3:by*3 + 3, bx*3:bx*3 + 3] = result.reshape((3,3,9))
         return np.any(self.state != old_state)
 
-    def get_possible_actions(self, heuristic=True):
+    def get_possible_actions(self, heuristic=False):
         assignments = []
         for y, x in np.ndindex(9,9):
             if self.state[y, x].sum() > 1:
@@ -348,6 +170,14 @@ def pairs():
             yield np.array([i, j])
 
 
+# Count all the distinct triples of elements one through nine
+def triples():
+    for i in range(9):
+        for j in range(i+1, 9):
+            for k in range(j+1, 9):
+                yield np.array([i, j, k])
+
+
 # Given a group of 9 cells (row, column, or box) and two indices, is there a naked pair?
 def naked_pair(group, pair):
     # For each cell
@@ -364,6 +194,20 @@ def naked_pair(group, pair):
     return group
 
 
+# Given three cells, do they form a naked triple?
+def naked_triple(group, cell_triple):
+    # Does each cell have two possible numbers?
+    if all(group[cell_triple].sum(1) == 2):
+        # If you combine them, are there three numbers?
+        if group[cell_triple].any(0).sum() == 3:
+            # This is a naked triple
+            values = [i for i, x in enumerate(group[cell_triple].any(0)) if x]
+            for i in range(9):
+                if i not in cell_triple:
+                    group[i, values] = False
+    return group
+
+
 # Given a group of 9 cells, does the given pair of numbers form a hidden pair?
 def hidden_pair(group, number_pair):
     # Does each number occur only twice?
@@ -375,6 +219,21 @@ def hidden_pair(group, number_pair):
                 group[cell_pair, :] = False
                 for i in cell_pair:
                     for j in number_pair:
+                        group[i, j] = True
+    return group
+
+
+# Given three cells, do they form a hidden triple?
+def hidden_triple(group, number_triple):
+    # Does each number appear only three times?
+    if all(s == 3 for s in group[:, number_triple].sum(0)):
+        # Do they appear in the same three places?
+        for cell_triple in triples():
+            if all(group[cell_triple, number].all() for number in number_triple):
+                # Hidden triple: other numbers cannot occur in these cells
+                group[cell_triple, :] = False
+                for i in cell_triple:
+                    for j in number_triple:
                         group[i, j] = True
     return group
     
