@@ -90,7 +90,8 @@ class Sudoku:
                 # There are 9 boxes, each is 3x3 and contains 9 squares
                 for bx, by in np.ndindex(3, 3):
                     box = self.state[by*3:by*3 + 3, bx*3:bx*3 + 3].reshape((9,9))
-                    naked_pair(box, pair)
+                    result = naked_pair(box, pair)
+                    self.state[by*3:by*3 + 3, bx*3:bx*3 + 3] = result.reshape((3,3,9))
         return np.any(self.state != old_state)
 
     def heuristic_hidden_pairs(self):
