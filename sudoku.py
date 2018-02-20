@@ -33,12 +33,10 @@ class Sudoku:
                 continue
             if self.heuristic_hidden_pairs():
                 continue
-            """
             if self.heuristic_naked_triples():
                 continue
             if self.heuristic_hidden_triples():
                 continue
-            """
             # Every heuristic is finished running: inference is done now
             break
 
